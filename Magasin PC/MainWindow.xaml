@@ -1,0 +1,45 @@
+﻿<Window x:Class="MagasinPC.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:local="clr-namespace:MagasinPC"
+        Title="App Store" MinHeight="420" MinWidth="730" Width="Auto" Margin="10,10,10,10">
+    
+    <Window.Resources>
+        
+        <!-- Définir le DataTemplate pour les éléments du ListBox -->
+        <DataTemplate x:Key="AppTemplate" >
+            <StackPanel Width="Auto">
+                <Grid>
+                    <Image x:Name="AppIconImage" Width="50" Height="50" Margin="5" Source="{Binding Icone}" />
+                    <TextBlock Text="{Binding Name}" FontWeight="Bold"/>
+                </Grid>
+                <TextBlock Text="{Binding Description}" Foreground="Gray"/>
+                <TextBlock Text="{Binding Version}" Foreground="Gray"/>
+            </StackPanel>
+        </DataTemplate>
+    </Window.Resources>
+
+    <DockPanel Margin="10">
+
+        <!-- Liste des applications -->
+        <ListBox x:Name="AppList"  DockPanel.Dock="Top" ItemsSource="{Binding Apps}" ItemTemplate="{StaticResource AppTemplate}"
+ HorizontalAlignment="Stretch" Height="300" Width="Auto" Margin="10,10,10,10" VerticalAlignment="Stretch"  MouseUp="AppList_MouseUp"/>
+
+        <Grid DockPanel.Dock="Bottom" Margin="10">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="Auto"/>
+                <!-- Boutons -->
+                <ColumnDefinition Width="*"/>
+                <!-- Colonne vide pour occuper l'espace restant -->
+            </Grid.ColumnDefinitions>
+            <StackPanel Orientation="Horizontal" Grid.Column="0">
+                <!-- Bouton pour ajouter une application -->
+                <Button Name="AddAppButton" Content="Add App" HorizontalAlignment="Left" Margin="10,0,0,0" VerticalAlignment="Top" Width="100" Click="AddApp_Click"/>
+
+                <!-- Bouton pour supprimer une application -->
+                <Button Name="UpdateAppButton" Content="Update App" HorizontalAlignment="Left" Margin="10,0,0,10" VerticalAlignment="Top" Width="100" Click="UpdateApp_Click"/>
+            </StackPanel>
+            <Button Name="RemoveAppButton" Content="Remove App" HorizontalAlignment="Left" Margin="120,0,0,10" VerticalAlignment="Top" Width="100" Click="RemoveApp_Click" Grid.Column="0"/>
+        </Grid>
+    </DockPanel>
+</Window>
