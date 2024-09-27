@@ -1,0 +1,44 @@
+﻿<ResourceDictionary xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+                    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation">
+    <Style x:Key="ModernCheckBox" TargetType="CheckBox">
+        <Setter Property="Template">
+            <Setter.Value>
+                <ControlTemplate TargetType="CheckBox">
+                    <Grid Width="20" Height="20" HorizontalAlignment="Left">
+                        <!-- Fond de la CheckBox -->
+                        <Border x:Name="Border" 
+                        Background="Transparent" 
+                        BorderBrush="#FF6200EE" 
+                        BorderThickness="1" 
+                        CornerRadius="4"/>
+                        <!-- Cocher -->
+                        <Path x:Name="CheckMark" 
+                      Data="M1,6 L6,10 L13,2" 
+                      Stroke="White" 
+                      StrokeThickness="2" 
+                      StrokeStartLineCap="Round" 
+                      StrokeEndLineCap="Round" 
+                      StrokeLineJoin="Round" 
+                      Visibility="Hidden"
+                              VerticalAlignment="Center"
+                              HorizontalAlignment="Center"/>
+                    </Grid>
+                    <ControlTemplate.Triggers>
+                        <!-- Animation de remplissage au moment du check -->
+                        <Trigger Property="IsChecked" Value="True">
+                            <Setter TargetName="Border" Property="Background" Value="#FF6200EE"/>
+                            <Setter TargetName="Border" Property="BorderThickness" Value="0"/>
+                            <Setter TargetName="CheckMark" Property="Visibility" Value="Visible"/>
+                        </Trigger>
+                       
+                        <!-- Animation au survol -->
+                        <Trigger Property="IsMouseOver" Value="True">
+                            <Setter TargetName="Border" Property="BorderBrush" Value="#FFBB86FC"/>
+                            <Setter TargetName="Border" Property="BorderThickness" Value="1"/>
+                        </Trigger>
+                    </ControlTemplate.Triggers>
+                </ControlTemplate>
+            </Setter.Value>
+        </Setter>
+    </Style>
+</ResourceDictionary>

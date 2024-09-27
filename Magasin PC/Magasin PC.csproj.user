@@ -10,12 +10,54 @@
     <Compile Update="AppInfoWindow.xaml.cs">
       <SubType>Code</SubType>
     </Compile>
+    <Compile Update="SettingBDDWindow.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="ConfirmationWindow.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="SettingWindow.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
   </ItemGroup>
   <ItemGroup>
     <Page Update="AppInfoWindow.xaml">
       <SubType>Designer</SubType>
     </Page>
+    <Page Update="SettingStorageWindow.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="SettingBDDWindow.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Ressource\Boutons\Boutons.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Ressource\CheckBox\CheckBox.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Ressource\Couleur\Couleur.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Ressource\Icons\Icons.xaml">
+      <SubType>Designer</SubType>
+    </Page>
     <Page Update="MainWindow.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Ressource\ListBox\ListBox.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="ConfirmationWindow.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Ressource\ComboBox.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Ressource\Template\Template.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="SettingWindow.xaml">
       <SubType>Designer</SubType>
     </Page>
   </ItemGroup>

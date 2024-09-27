@@ -1,92 +1,28 @@
-﻿using System.ComponentModel;
+﻿using System;
+using System.Collections.Generic;
+using System.Collections.ObjectModel;
+using System.ComponentModel;
+using System.Windows.Documents;
 
 public class AppModel : INotifyPropertyChanged
 {
     public Guid Id { get; set; } = Guid.NewGuid();
-    private string name;
-    private string version;
-    private string filePath;
-    private string? description;
-    private bool isVisible;
-    private string? icone;
+    public required string Name { get; set; }
+    public required string Version { get; set; }
+    public required string FilePath { get; set; }
+    public string? Description { get; set; }
+    public bool IsVisible { get; set; }
+    public string? Icone { get; set; }
+    public required ObservableCollection<string> Platform { get; set; }
+    public ObservableCollection<string>? Tag { get; set; }
 
-    public string Name
-    {
-        get => name;
-        set
-        {
-            if (name != value)
-            {
-                name = value;
-                OnPropertyChanged(nameof(Name));
-            }
-        }
-    }
-
-    public string Version
-    {
-        get => version;
-        set
-        {
-            if (version != value)
-            {
-                version = value;
-                OnPropertyChanged(nameof(Version));
-            }
-        }
-    }
-
-    public string FilePath
-    {
-        get => filePath;
-        set
-        {
-            if (filePath != value)
-            {
-                filePath = value;
-                OnPropertyChanged(nameof(FilePath));
-            }
-        }
-    }
-
-    public string? Description
-    {
-        get => description;
-        set
-        {
-            if (description != value)
-            {
-                description = value;
-                OnPropertyChanged(nameof(Description));
-            }
-        }
-    }
-
-    public bool IsVisible
-    {
-        get => isVisible;
-        set
-        {
-            if (isVisible != value)
-            {
-                isVisible = value;
-                OnPropertyChanged(nameof(IsVisible));
-            }
-        }
-    }
-
-    public string? Icone
-    {
-        get => icone;
-        set
-        {
-            if (icone != value) 
-            {
-                icone = value;
-                OnPropertyChanged(nameof(Icone));
-            }
-        }
-    }
+    // Propriétés supplémentaires
+    public string? Category { get; set; }  // Catégorie de l'application
+    public DateTime ReleaseDate { get; set; } = DateTime.Now;  // Date de publication
+    public DateTime? LastUpdated { get; set; }  // Dernière mise à jour
+    public long AppSize { get; set; }  // Taille de l'application en octets
+    public ObservableCollection<string>? Languages { get; set; }  // Langues disponibles
+    public string? Requirements { get; set; }  // Conditions requises (ex: version minimum de l'OS)
 
     public event PropertyChangedEventHandler? PropertyChanged;
 

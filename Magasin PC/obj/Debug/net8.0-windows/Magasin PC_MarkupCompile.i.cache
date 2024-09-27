@@ -4,17 +4,17 @@
 winexe
 C#
 .cs
-C:\Users\cedri\source\repos\Magasin PC\Magasin PC\obj\Debug\net8.0-windows\
+C:\Users\Vadra\source\repos\Magasin-PC\Magasin PC\obj\Debug\net8.0-windows\
 Magasin_PC
 none
 false
 TRACE;DEBUG;NET;NET8_0;NETCOREAPP
-C:\Users\cedri\source\repos\Magasin PC\Magasin PC\App.xaml
-2-1480050786
+C:\Users\Vadra\source\repos\Magasin-PC\Magasin PC\App.xaml
+13194810483
 
-10881897786
-199-1676927206
-AppInfoWindow.xaml;MainWindow.xaml;
+19345147589
+208-772851883
+AppInfoWindow.xaml;ConfirmationWindow.xaml;MainWindow.xaml;Ressource\Boutons\Boutons.xaml;Ressource\CheckBox\CheckBox.xaml;Ressource\ComboBox.xaml;Ressource\Couleur\Couleur.xaml;Ressource\Icons\Icons.xaml;Ressource\ListBox\ListBox.xaml;Ressource\Template\Template.xaml;SettingBDDWindow.xaml;SettingStorageWindow.xaml;SettingWindow.xaml;
 
 True
 

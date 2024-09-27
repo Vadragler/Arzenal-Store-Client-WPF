@@ -1,10 +1,11 @@
 ﻿using System.Collections.ObjectModel;
+using System.ComponentModel;
 using System.IO;
 using Newtonsoft.Json;
 
-namespace MagasinPC
+namespace Magasin_PC
 {
-    public class MainViewModel
+    public class MainViewModel : INotifyPropertyChanged
     {
         public ObservableCollection<AppModel> Apps { get; set; } = new ObservableCollection<AppModel>();
 
@@ -12,9 +13,29 @@ namespace MagasinPC
 
         public MainViewModel()
         {
-            Apps = new ObservableCollection<AppModel>();
             LoadApps();
         }
+
+        private AppModel _selectedApp;
+        public AppModel SelectedApp
+        {
+            get { return _selectedApp; }
+            set
+            {
+                _selectedApp = value;
+                OnPropertyChanged(nameof(SelectedApp));
+            }
+        }
+
+        // Autres propriétés et méthodes
+
+        public event PropertyChangedEventHandler PropertyChanged;
+        protected void OnPropertyChanged(string propertyName)
+        {
+            PropertyChanged?.Invoke(this, new PropertyChangedEventArgs(propertyName));
+        }
+
+
 
         public void AddApp(AppModel app)
         {
@@ -36,6 +57,11 @@ namespace MagasinPC
 
         public void SaveApps()
         {
+            string directoryPath = Path.GetDirectoryName(_filePath);
+            if (!Directory.Exists(directoryPath))
+            {
+                Directory.CreateDirectory(directoryPath);
+            }
             string json = JsonConvert.SerializeObject(Apps, Formatting.Indented);
             File.WriteAllText(_filePath, json);
         }
@@ -52,6 +78,5 @@ namespace MagasinPC
                 }
             }
         }
-
     }
 }

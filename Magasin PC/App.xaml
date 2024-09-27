@@ -4,6 +4,16 @@
              xmlns:local="clr-namespace:Magasin_PC"
              StartupUri="MainWindow.xaml">
     <Application.Resources>
-         
+        <ResourceDictionary>
+            <ResourceDictionary.MergedDictionaries>
+                <ResourceDictionary Source="Ressource/Icons/Icons.xaml"/>
+                <ResourceDictionary Source="Ressource/Boutons/Boutons.xaml"/>
+                <ResourceDictionary Source="Ressource/CheckBox/CheckBox.xaml"/>
+                <ResourceDictionary Source="Ressource/ListBox/ListBox.xaml"/>
+                <ResourceDictionary Source="Ressource/Couleur/Couleur.xaml"/>
+                <ResourceDictionary Source="Ressource/Template/Template.xaml"/>
+                <ResourceDictionary Source="Ressource/ComboBox.xaml"/>
+            </ResourceDictionary.MergedDictionaries>
+        </ResourceDictionary>
     </Application.Resources>
 </Application>

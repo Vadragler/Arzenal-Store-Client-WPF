@@ -1,0 +1,16 @@
+﻿<Window x:Class="Magasin_PC.ConfirmationWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Deactivated="ConfirmationWindow_Deactivated"
+        Activated="ConfirmationWindow_Activated"
+        Title="Confirmation" Height="150" Width="350">
+    <Grid>
+        <StackPanel VerticalAlignment="Center" HorizontalAlignment="Center" Margin="10">
+            <TextBlock Text="Êtes-vous sûr de vouloir supprimer cette application ?" Margin="0,0,0,10"/>
+            <StackPanel Orientation="Horizontal" HorizontalAlignment="Right">
+                <Button Style="{StaticResource ButtonStyle}" Content="Annuler" Height="20" Width="80" Margin="5" Click="NoButton_Click"/>
+                <Button Style="{StaticResource ButtonStyle}" Content="Supprimer" Height="20" Width="80" Margin="5" Click="YesButton_Click"/>
+            </StackPanel>
+        </StackPanel>
+    </Grid>
+</Window>

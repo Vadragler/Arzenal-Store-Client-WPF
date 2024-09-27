@@ -1,0 +1,75 @@
+﻿<Window x:Class="Magasin_PC.SettingWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Magasin_PC"
+        mc:Ignorable="d"
+        Title="SettingWindow" Height="450" Width="800">
+    <Grid>
+        <StackPanel Orientation="Horizontal" HorizontalAlignment="Center" VerticalAlignment="Center">
+            <StackPanel Orientation="Vertical" HorizontalAlignment="Center" VerticalAlignment="Center" Margin="10">
+                <!-- Liste des OS -->
+                <TextBlock Name="TextOS"  Text="Systèmes d'exploitation" FontWeight="Bold" Margin="10"/>
+                <ListBox Name="OSList" SelectionChanged="OSList_SelectionChanged" Height="100">
+                    <!-- Template d'affichage des OS avec un bouton de suppression -->
+                    <ListBox.ItemTemplate>
+                        <DataTemplate>
+                            <StackPanel Orientation="Horizontal">
+                                <TextBlock Text="{Binding Name}" Width="200"/>
+                                <Button Content="Supprimer" 
+                                        Click="DeleteOperatingSystem_Click" 
+                                        Tag="{StaticResource DeleteIcon}" 
+                                        DataContext="{Binding}"
+                                        Style="{StaticResource IconButtonStyle}" 
+                                        ToolTip="Supprimer le système d'exploitation"
+                                        Margin="5,0,0,0"/>
+                            </StackPanel>
+                        </DataTemplate>
+                    </ListBox.ItemTemplate>
+                </ListBox>
+
+                <!-- Champ de modification pour les OS -->
+                <TextBox Name="OSTextBox" Width="200" Margin="10"/>
+                <Button Name="AddOrUpdateOSButton" 
+                        Style="{StaticResource IconButtonStyle}" 
+                        Tag="{StaticResource AddIcon}" 
+                        Width="30" Height="30" 
+                        Click="AddOperatingSystem_Click" 
+                        ToolTip="Ajouter ou mettre à jour un système d'exploitation"/>
+                <Button Name="CancelButtonOS" Visibility="Collapsed"  Content="Annuler" Style="{StaticResource IconButtonStyle}" Tag="{StaticResource DeleteIcon}" Click="CancelButtonOS_Click" Margin="0,0,0,0"/>
+            </StackPanel>
+
+            <StackPanel Orientation="Vertical" HorizontalAlignment="Center" VerticalAlignment="Center" Margin="10">
+                <!-- Liste des versions d'OS -->
+                <TextBlock Name="TextOSVersion" Text="Versions des OS" FontWeight="Bold" Margin="10"/>
+                <ListBox Name="OSVersionsList" SelectionChanged="OSVersionsList_SelectionChanged" Height="100">
+                    <!-- Template d'affichage des versions avec un bouton de suppression -->
+                    <ListBox.ItemTemplate>
+                        <DataTemplate>
+                            <StackPanel Orientation="Horizontal">
+                                <TextBlock Text="{Binding Version}" Width="200"/>
+                                <Button Content="Supprimer" 
+                                        Click="DeleteOSVersion_Click" 
+                                        Tag="{Binding Id}" 
+                                        ToolTip="Supprimer cette version" 
+                                        Margin="5,0,0,0"/>
+                            </StackPanel>
+                        </DataTemplate>
+                    </ListBox.ItemTemplate>
+                </ListBox>
+
+                <!-- Champ de modification pour les versions d'OS -->
+                <TextBox Name="OSVersionTextBox" Width="200" Margin="10"/>
+                <Button Name="AddOrUpdateOSVersionButton" 
+                        Content="Ajouter" 
+                        Style="{StaticResource IconButtonStyle}" 
+                        Tag="{StaticResource AddIcon}" 
+                        Width="30" Height="30" 
+                        Click="AddOSVersion_Click" 
+                        ToolTip="Ajouter ou mettre à jour une version d'OS"/>
+                <Button Name="CancelButtonVersion" Visibility="Collapsed"  Content="Annuler" Style="{StaticResource IconButtonStyle}" Tag="{StaticResource DeleteIcon}" Click="CancelButtonVersion_Click" Margin="0,0,0,0"/>
+            </StackPanel>
+        </StackPanel>
+    </Grid>
+</Window>

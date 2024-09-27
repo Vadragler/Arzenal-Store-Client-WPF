@@ -1,0 +1,45 @@
+﻿<Window x:Class="Magasin_PC.SettingStorageWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="App Setting" Height="450" Width="800">
+    <Grid Margin="20">
+        <StackPanel>
+            <!-- Champ pour la chaîne de connexion à la BDD -->
+            <TextBox x:Name="Username" 
+                     Text="Username" 
+                     GotFocus="TextBox_GotFocus" 
+                     LostFocus="TextBox_LostFocus" 
+                     Margin="0,0,0,10"/>
+
+            <!-- Champ pour le mot de passe -->
+            <TextBlock Text="Mot de passe" 
+                       Foreground="Gray" 
+                       VerticalAlignment="Center"/>
+            <PasswordBox x:Name="PasswordBox" 
+                         Margin="0,0,0,10" 
+                         GotFocus="PasswordBox_GotFocus" 
+                         LostFocus="PasswordBox_LostFocus"/>
+
+            <!-- Champ pour l'URL ou l'adresse IP du serveur Docker -->
+            <TextBox x:Name="DockerHostTextBox" 
+                     Text="Adresse IP du Docker" 
+                     GotFocus="TextBox_GotFocus" 
+                     LostFocus="TextBox_LostFocus" 
+                     Margin="0,0,0,10"/>
+
+            <!-- Champ pour le port du serveur Docker -->
+            <TextBox x:Name="DockerPortTextBox" 
+                     Text="Port Docker" 
+                     GotFocus="TextBox_GotFocus" 
+                     LostFocus="TextBox_LostFocus" 
+                     Margin="0,0,0,10"/>
+
+            <!-- Bouton pour tester la connexion -->
+            <Button Content="Valider" 
+                    HorizontalAlignment="Center" 
+                    VerticalAlignment="Bottom" 
+                    Click="ValiderSftp" 
+                    Margin="0,10,0,10"/>
+        </StackPanel>
+    </Grid>
+</Window>

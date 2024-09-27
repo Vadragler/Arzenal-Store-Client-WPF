@@ -1,6 +1,6 @@
 ﻿using System.Windows;
 
-namespace MagasinPC
+namespace Magasin_PC
 {
     public partial class App : Application
     {
