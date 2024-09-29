@@ -1,12 +1,9 @@
 ﻿using MySql.Data.MySqlClient;
-using MySqlX.XDevAPI;
 using System.IO;
-using System.Timers;
 using System.Windows;
 using System.Windows.Controls;
 using System.Windows.Input;
 using System.Windows.Media;
-using System.Windows.Media.Imaging;
 
 namespace Magasin_PC
 {
@@ -21,7 +18,7 @@ namespace Magasin_PC
         protected MySqlConnection connection { get; private set; }
         public bool IsConnected {  get;  set; } = false;
 
-        private CancellationTokenSource _cts;
+        private CancellationTokenSource? _cts;
 
         private SftpManager _sftpManager = new SftpManager();
 
@@ -30,11 +27,18 @@ namespace Magasin_PC
         public MainWindow()
         {
             InitializeComponent();
-            this.Loaded += MainWindow_Loaded;
-            this.viewModel = new MainViewModel();
-            this.DataContext = viewModel;
-            StartCheckingConnection();
+            viewModel = new MainViewModel();
+            DataContext = viewModel;
+            Loaded += MainWindow_Loaded;
         }
+
+        private async void MainWindow_Loaded(object sender, RoutedEventArgs e)
+        {
+            await StartCheckingConnection();
+            await ConnectToDatabaseAsync();
+            await ConnectToSftp();
+        }
+
 
         public bool GetConnectionStatus()
         {
@@ -126,7 +130,7 @@ namespace Magasin_PC
                     {
                         await ConnectToDatabaseAsync(); // Tenter de se reconnecter
                     }
-                    catch (Exception ex)
+                    catch (Exception)
                     {
                         // Gérer l'échec de la reconnexion ici
                     }
@@ -134,12 +138,6 @@ namespace Magasin_PC
             }
         }
 
-
-        private async void MainWindow_Loaded(object sender, RoutedEventArgs e)
-        {
-            await ConnectToDatabaseAsync();
-            ConnectToSftp();
-        }
 
         public async Task ConnectToDatabaseAsync()
         {
@@ -151,12 +149,14 @@ namespace Magasin_PC
 
                 await connection.OpenAsync();
                 IsConnected = true;
-                    UpdateConnectionStatus(1); // Mise à jour de l'icône en vert (connexion réussie).
+                DatabaseManager _databasemanager = new DatabaseManager(connection,this);
+                await _databasemanager.OnDatabaseReconnect();
+                UpdateConnectionStatus(1); // Mise à jour de l'icône en vert (connexion réussie).
             }
-            catch (Exception ex)
+            catch (Exception)
             {
                 IsConnected = false;
-                    UpdateConnectionStatus(-1); // Mise à jour de l'icône en vert (connexion réussie).
+                UpdateConnectionStatus(-1); // Mise à jour de l'icône en vert (connexion réussie).
             }
         }
 
@@ -224,14 +224,14 @@ namespace Magasin_PC
             dbWindow.ShowDialog();
         }
 
-        public void ConnectToSftp()
+        public async Task ConnectToSftp()
         {
             ChangeConnectionIcon(0);
             // Remplacez les valeurs par les données de configuration appropriées
             StorageConfig config = ConfigManager.LoadStorageConfig();
             if (config != null)
             {
-               _sftpManager.ConnectAsync(config.DockerHost, config.User, config.Password, int.Parse(config.DockerPort));
+                await _sftpManager.ConnectAsync(config.DockerHost, config.User, config.Password, int.Parse(config.DockerPort));
                _sftpManager.StartCheckingSftpConnection(config.DockerHost, config.User, config.Password, int.Parse(config.DockerPort));
             }
         }

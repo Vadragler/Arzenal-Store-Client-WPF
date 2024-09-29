@@ -1,5 +1,4 @@
 ﻿using Microsoft.Win32;
-using System.Threading.Tasks;
 
 namespace Magasin_PC
 {

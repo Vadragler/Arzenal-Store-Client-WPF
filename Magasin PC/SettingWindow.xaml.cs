@@ -1,6 +1,4 @@
-﻿using System;
-using System.Collections.ObjectModel;
-using System.Threading.Tasks;
+﻿using System.Collections.ObjectModel;
 using System.Windows;
 using MySql.Data.MySqlClient;
 using System.Windows.Controls;
@@ -13,8 +11,8 @@ namespace Magasin_PC
         private ObservableCollection<OperatingSystemModel> _operatingSystems { get; set; }
         private ObservableCollection<OSVersionModel> _osVersions;
         private MySqlConnection _connection;
-        private OperatingSystemModel _selectedOperatingSystem;
-        private OSVersionModel _selectedOSVersion;
+        private OperatingSystemModel? _selectedOperatingSystem;
+        private OSVersionModel? _selectedOSVersion;
         private MainWindow _mainWindow;
         private DatabaseManager _databaseManager;
 
@@ -23,13 +21,18 @@ namespace Magasin_PC
             InitializeComponent();
             _mainWindow = mainWindow;
             _connection = _mainWindow.GetConnectionInfos();
-            _databaseManager = new DatabaseManager(_connection);
-            LoadOperatingSystemsAsync();
-            LoadOSVersionsAsync();
+            _databaseManager = new DatabaseManager(_connection,_mainWindow);
+            Loaded += SettingWindow_Loaded; // Événement pour charger les données
+        }
+
+        private async void SettingWindow_Loaded(object sender, RoutedEventArgs e)
+        {
+            await LoadOperatingSystemsAsync();
+            await LoadOSVersionsAsync();
             UpdateVisibility();
         }
 
-        private async Task UpdateVisibility()
+        private void UpdateVisibility()
         {
             bool isConnected = _mainWindow.GetConnectionStatus();
             TextOS.Visibility = isConnected ? Visibility.Visible : Visibility.Collapsed;
@@ -46,6 +49,7 @@ namespace Magasin_PC
         {
             if (_mainWindow.GetConnectionStatus())
             {
+                _connection = _mainWindow.GetConnectionInfos();
                 _operatingSystems = new ObservableCollection<OperatingSystemModel>();
                 string query = "SELECT * FROM OperatingSystems";
                 using (MySqlCommand cmd = new MySqlCommand(query, _connection))
@@ -66,22 +70,26 @@ namespace Magasin_PC
 
         private async Task LoadOSVersionsAsync()
         {
-            _osVersions = new ObservableCollection<OSVersionModel>();
-            string query = "SELECT * FROM OSVersions";
-            using (MySqlCommand cmd = new MySqlCommand(query, _connection))
-            using (var reader = await cmd.ExecuteReaderAsync())
+            if (_mainWindow.GetConnectionStatus())
             {
-                while (await reader.ReadAsync())
+                _connection = _mainWindow.GetConnectionInfos();
+                _osVersions = new ObservableCollection<OSVersionModel>();
+                string query = "SELECT * FROM OSVersions";
+                using (MySqlCommand cmd = new MySqlCommand(query, _connection))
+                using (var reader = await cmd.ExecuteReaderAsync())
                 {
-                    _osVersions.Add(new OSVersionModel
+                    while (await reader.ReadAsync())
                     {
-                        Id = reader.GetInt32("Id"),
-                        Version = reader.GetString("Version"),
-                        OperatingSystemId = reader.GetInt32("OperatingSystemId")
-                    });
+                        _osVersions.Add(new OSVersionModel
+                        {
+                            Id = reader.GetInt32("Id"),
+                            Version = reader.GetString("Version"),
+                            OperatingSystemId = reader.GetInt32("OSId")
+                        });
+                    }
                 }
+                OSVersionsList.ItemsSource = _osVersions;
             }
-            OSVersionsList.ItemsSource = _osVersions;
         }
 
         private void OSList_SelectionChanged(object sender, SelectionChangedEventArgs e)
@@ -140,6 +148,8 @@ namespace Magasin_PC
 
         private async void AddOperatingSystem_Click(object sender, RoutedEventArgs e)
         {
+            _connection = _mainWindow.GetConnectionInfos();
+            _databaseManager = new DatabaseManager(_connection, _mainWindow);
             if (_selectedOperatingSystem != null)
             {
                 await _databaseManager.UpdateAsync("OperatingSystems", _selectedOperatingSystem.Id, OSTextBox.Text); // Utiliser la méthode générique pour mettre à jour
@@ -156,22 +166,29 @@ namespace Magasin_PC
 
         private async void AddOSVersion_Click(object sender, RoutedEventArgs e)
         {
-            if (_selectedOSVersion != null)
+            if (_selectedOperatingSystem != null)
             {
-                await _databaseManager.UpdateAsync("OSVersions", _selectedOSVersion.Id, OSVersionTextBox.Text); // Utiliser la méthode générique pour mettre à jour
-                _selectedOSVersion.Version = OSVersionTextBox.Text; // Mettre à jour l'élément dans la collection observable
+                _connection = _mainWindow.GetConnectionInfos();
+                _databaseManager = new DatabaseManager(_connection, _mainWindow);
+                if (_selectedOSVersion != null)
+                {
+                    await _databaseManager.UpdateAsync("OSVersions", _selectedOSVersion.Id, OSVersionTextBox.Text); // Utiliser la méthode générique pour mettre à jour
+                    _selectedOSVersion.Version = OSVersionTextBox.Text; // Mettre à jour l'élément dans la collection observable
+                }
+                else
+                {
+                    await _databaseManager.AddAsync("OSVersions", OSVersionTextBox.Text, _selectedOperatingSystem.Id); // Utiliser la méthode générique pour ajouter
+                    _osVersions.Add(new OSVersionModel { Version = OSVersionTextBox.Text, OperatingSystemId = _selectedOperatingSystem.Id }); // Ajouter à la collection
+                }
+                OSVersionTextBox.Clear();
+                await LoadOSVersionsAsync(); // Recharger les versions d'OS
             }
-            else
-            {
-                await _databaseManager.AddAsync("OSVersions", OSVersionTextBox.Text, _selectedOperatingSystem.Id); // Utiliser la méthode générique pour ajouter
-                _osVersions.Add(new OSVersionModel { Version = OSVersionTextBox.Text, OperatingSystemId = _selectedOperatingSystem.Id }); // Ajouter à la collection
-            }
-            OSVersionTextBox.Clear();
-            await LoadOSVersionsAsync(); // Recharger les versions d'OS
         }
 
         private async void DeleteOperatingSystem_Click(object sender, RoutedEventArgs e)
         {
+            _connection = _mainWindow.GetConnectionInfos();
+            _databaseManager = new DatabaseManager(_connection, _mainWindow);
             if (sender is Button button && button.DataContext is OperatingSystemModel osToDelete)
             {
                 await _databaseManager.DeleteAsync("OperatingSystems", osToDelete.Id); // Utiliser la méthode générique pour supprimer
@@ -185,8 +202,11 @@ namespace Magasin_PC
 
         private async void DeleteOSVersion_Click(object sender, RoutedEventArgs e)
         {
+            _connection = _mainWindow.GetConnectionInfos();
+            _databaseManager = new DatabaseManager(_connection, _mainWindow);
             if (sender is Button button && button.DataContext is OSVersionModel versionToDelete)
             {
+                _databaseManager = new DatabaseManager(_connection, _mainWindow);
                 await _databaseManager.DeleteAsync("OSVersions", versionToDelete.Id); // Utiliser la méthode générique pour supprimer
                 _osVersions.Remove(versionToDelete); // Supprimer de la liste observable
             }
@@ -194,15 +214,6 @@ namespace Magasin_PC
             {
                 MessageBox.Show("Erreur lors de la tentative de suppression.");
             }
-        }
-
-
-        public async Task OnDatabaseReconnect()
-        {
-            _connection = _mainWindow.GetConnectionInfos();
-            UpdateVisibility();
-            await LoadOperatingSystemsAsync();
-            await LoadOSVersionsAsync();
         }
     }
 }

@@ -26,8 +26,8 @@ namespace Magasin_PC
             _ownerWindow = ownerWindow;
 
             this.Owner = _ownerWindow; // Définit la fenêtre principale comme propriétaire
-            this.Activated += ConfirmationWindow_Activated;
-            this.Deactivated += ConfirmationWindow_Deactivated;
+            this.Activated += ConfirmationWindow_Activated!;
+            this.Deactivated += ConfirmationWindow_Deactivated!;
         }
 
         private void YesButton_Click(object sender, RoutedEventArgs e)

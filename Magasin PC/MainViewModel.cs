@@ -32,7 +32,7 @@ namespace Magasin_PC
         public event PropertyChangedEventHandler PropertyChanged;
         protected void OnPropertyChanged(string propertyName)
         {
-            PropertyChanged?.Invoke(this, new PropertyChangedEventArgs(propertyName));
+            PropertyChanged.Invoke(this, new PropertyChangedEventArgs(propertyName));
         }
 
 
@@ -57,7 +57,7 @@ namespace Magasin_PC
 
         public void SaveApps()
         {
-            string directoryPath = Path.GetDirectoryName(_filePath);
+            string directoryPath = Path.GetDirectoryName(_filePath)!;
             if (!Directory.Exists(directoryPath))
             {
                 Directory.CreateDirectory(directoryPath);

@@ -1,7 +1,5 @@
 ﻿using System.Windows;
 using System.Windows.Controls;
-using MySql.Data.MySqlClient;
-
 
 namespace Magasin_PC
 {
@@ -13,7 +11,7 @@ namespace Magasin_PC
         public SettingBDDWindow()
         {
             InitializeComponent();
-            DatabaseConfig config = ConfigManager.LoadConfig();
+            DatabaseConfig config = ConfigManager.LoadConfig()!;
             if (config != null)
             {
                 DockerHostTextBox.Text = config.Server;
@@ -37,7 +35,7 @@ namespace Magasin_PC
             ConfigManager.SaveConfig(config);
             this.Close();
             await mainWindow.ConnectToDatabaseAsync();
-            mainWindow.StartCheckingConnection();
+            await mainWindow.StartCheckingConnection();
 
         }
 

@@ -1,8 +1,5 @@
 ﻿using System.Windows;
 using System.Windows.Controls;
-using MySql.Data.MySqlClient;
-using static Org.BouncyCastle.Math.EC.ECCurve;
-
 
 namespace Magasin_PC
 {
@@ -14,7 +11,7 @@ namespace Magasin_PC
         public SettingStorageWindow()
         {
             InitializeComponent();
-            StorageConfig config = ConfigManager.LoadStorageConfig();
+            StorageConfig config = ConfigManager.LoadStorageConfig()!;
             if (config != null)
             {
                 DockerHostTextBox.Text = config.DockerHost;
@@ -37,7 +34,7 @@ namespace Magasin_PC
             config.Password = PasswordBox.Password; // Assurez-vous de gérer le mot de passe
             ConfigManager.SaveStorageConfig(config);
             this.Close();
-            mainWindow.ConnectToSftp();
+            await mainWindow.ConnectToSftp();
         }
 
 

@@ -1,5 +1,4 @@
-﻿using Magasin_PC;
-using System.Collections.ObjectModel;
+﻿using System.Collections.ObjectModel;
 using System.Windows;
 using System.Windows.Controls;
 using System.Windows.Media.Imaging;
@@ -181,7 +180,7 @@ namespace Magasin_PC
             name=this.AppNameTextBox.Text;
             description=this.AppDescriptionTextBox.Text;
             version=this.AppVersionTextBox.Text;
-            isvisible = (bool)AppIsVisibleCheckBox.IsChecked;
+            isvisible = (bool)AppIsVisibleCheckBox.IsChecked!;
             icone = this.AppIconPathTextBox.Text;
             filepath = this.AppFilePathBox.Text;
 
@@ -194,7 +193,7 @@ namespace Magasin_PC
         {
             if (TagComboBox.SelectedItem != null)
             {
-                string selectedTag = TagComboBox.SelectedItem.ToString();
+                string selectedTag = TagComboBox.SelectedItem.ToString()!;
                 if (!tags.Contains(selectedTag))
                 {
                     tags.Add(selectedTag);
@@ -204,7 +203,7 @@ namespace Magasin_PC
 
         private void RemoveTag_Click(object sender, RoutedEventArgs e)
         {
-            string tagToRemove = (sender as Button)?.Tag.ToString();
+            string tagToRemove = (sender as Button)?.Tag.ToString()!;
             if (tagToRemove != null && tags.Contains(tagToRemove))
             {
                 tags.Remove(tagToRemove);
