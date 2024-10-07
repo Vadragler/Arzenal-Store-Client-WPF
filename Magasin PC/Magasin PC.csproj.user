@@ -7,27 +7,27 @@
     </ApplicationDefinition>
   </ItemGroup>
   <ItemGroup>
-    <Compile Update="AppInfoWindow.xaml.cs">
+    <Compile Update="Fenêtre\AppInfoWindow.xaml.cs">
       <SubType>Code</SubType>
     </Compile>
-    <Compile Update="SettingBDDWindow.xaml.cs">
+    <Compile Update="Fenêtre\SettingBDDWindow.xaml.cs">
       <SubType>Code</SubType>
     </Compile>
-    <Compile Update="ConfirmationWindow.xaml.cs">
+    <Compile Update="Fenêtre\ConfirmationWindow.xaml.cs">
       <SubType>Code</SubType>
     </Compile>
-    <Compile Update="SettingWindow.xaml.cs">
+    <Compile Update="Fenêtre\SettingWindow.xaml.cs">
       <SubType>Code</SubType>
     </Compile>
   </ItemGroup>
   <ItemGroup>
-    <Page Update="AppInfoWindow.xaml">
+    <Page Update="Fenêtre\AppInfoWindow.xaml">
       <SubType>Designer</SubType>
     </Page>
-    <Page Update="SettingStorageWindow.xaml">
+    <Page Update="Fenêtre\SettingStorageWindow.xaml">
       <SubType>Designer</SubType>
     </Page>
-    <Page Update="SettingBDDWindow.xaml">
+    <Page Update="Fenêtre\SettingBDDWindow.xaml">
       <SubType>Designer</SubType>
     </Page>
     <Page Update="Ressource\Boutons\Boutons.xaml">
@@ -42,13 +42,13 @@
     <Page Update="Ressource\Icons\Icons.xaml">
       <SubType>Designer</SubType>
     </Page>
-    <Page Update="MainWindow.xaml">
+    <Page Update="Fenêtre\MainWindow.xaml">
       <SubType>Designer</SubType>
     </Page>
     <Page Update="Ressource\ListBox\ListBox.xaml">
       <SubType>Designer</SubType>
     </Page>
-    <Page Update="ConfirmationWindow.xaml">
+    <Page Update="Fenêtre\ConfirmationWindow.xaml">
       <SubType>Designer</SubType>
     </Page>
     <Page Update="Ressource\ComboBox.xaml">
@@ -57,7 +57,7 @@
     <Page Update="Ressource\Template\Template.xaml">
       <SubType>Designer</SubType>
     </Page>
-    <Page Update="SettingWindow.xaml">
+    <Page Update="Fenêtre\SettingWindow.xaml">
       <SubType>Designer</SubType>
     </Page>
   </ItemGroup>

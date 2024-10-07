@@ -10,11 +10,11 @@ none
 false
 TRACE;DEBUG;NET;NET8_0;NETCOREAPP
 C:\Users\Vadra\source\repos\Magasin-PC\Magasin PC\App.xaml
-13194810483
+131561486435
 
-19345147589
+20-1146655771
 208-772851883
-AppInfoWindow.xaml;ConfirmationWindow.xaml;MainWindow.xaml;Ressource\Boutons\Boutons.xaml;Ressource\CheckBox\CheckBox.xaml;Ressource\ComboBox.xaml;Ressource\Couleur\Couleur.xaml;Ressource\Icons\Icons.xaml;Ressource\ListBox\ListBox.xaml;Ressource\Template\Template.xaml;SettingBDDWindow.xaml;SettingStorageWindow.xaml;SettingWindow.xaml;
+Fenêtre\AppInfoWindow.xaml;Fenêtre\ConfirmationWindow.xaml;Fenêtre\MainWindow.xaml;Fenêtre\SettingBDDWindow.xaml;Fenêtre\SettingStorageWindow.xaml;Fenêtre\SettingWindow.xaml;Ressource\Boutons\Boutons.xaml;Ressource\CheckBox\CheckBox.xaml;Ressource\ComboBox.xaml;Ressource\Couleur\Couleur.xaml;Ressource\Icons\Icons.xaml;Ressource\ListBox\ListBox.xaml;Ressource\Template\Template.xaml;
 
 False
 

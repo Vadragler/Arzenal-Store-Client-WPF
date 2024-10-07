@@ -84,7 +84,7 @@ namespace Magasin_PC {
                 return;
             }
             _contentLoaded = true;
-            System.Uri resourceLocater = new System.Uri("/Magasin PC;component/settingstoragewindow.xaml", System.UriKind.Relative);
+            System.Uri resourceLocater = new System.Uri("/Magasin PC;V1.0.0.0;component/settingstoragewindow.xaml", System.UriKind.Relative);
             
             #line 1 "..\..\..\SettingStorageWindow.xaml"
             System.Windows.Application.LoadComponent(this, resourceLocater);

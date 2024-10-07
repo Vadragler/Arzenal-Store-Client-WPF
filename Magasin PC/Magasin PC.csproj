@@ -27,11 +27,10 @@
 
   <ItemGroup>
     <Folder Include="Data\" />
-    <Folder Include="NewFolder\" />
   </ItemGroup>
 
   <ItemGroup>
-    <Compile Update="SettingStorageWindow.xaml.cs">
+    <Compile Update="Fenêtre\SettingStorageWindow.xaml.cs">
       <SubType>Code</SubType>
     </Compile>
   </ItemGroup>

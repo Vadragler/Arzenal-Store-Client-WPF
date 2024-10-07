@@ -30,13 +30,9 @@ C:\Users\Vadra\source\repos\Magasin-PC\Magasin PC\bin\Debug\net8.0-windows\Magas
 C:\Users\Vadra\source\repos\Magasin-PC\Magasin PC\bin\Debug\net8.0-windows\Magasin PC.pdb
 C:\Users\Vadra\source\repos\Magasin-PC\Magasin PC\bin\Debug\net8.0-windows\Newtonsoft.Json.dll
 C:\Users\Vadra\source\repos\Magasin-PC\Magasin PC\obj\Debug\net8.0-windows\Magasin PC.csproj.AssemblyReference.cache
-C:\Users\Vadra\source\repos\Magasin-PC\Magasin PC\obj\Debug\net8.0-windows\AppInfoWindow.g.cs
-C:\Users\Vadra\source\repos\Magasin-PC\Magasin PC\obj\Debug\net8.0-windows\MainWindow.g.cs
 C:\Users\Vadra\source\repos\Magasin-PC\Magasin PC\obj\Debug\net8.0-windows\App.g.cs
 C:\Users\Vadra\source\repos\Magasin-PC\Magasin PC\obj\Debug\net8.0-windows\Magasin PC_MarkupCompile.cache
 C:\Users\Vadra\source\repos\Magasin-PC\Magasin PC\obj\Debug\net8.0-windows\Magasin PC_MarkupCompile.lref
-C:\Users\Vadra\source\repos\Magasin-PC\Magasin PC\obj\Debug\net8.0-windows\AppInfoWindow.baml
-C:\Users\Vadra\source\repos\Magasin-PC\Magasin PC\obj\Debug\net8.0-windows\MainWindow.baml
 C:\Users\Vadra\source\repos\Magasin-PC\Magasin PC\obj\Debug\net8.0-windows\Magasin PC.g.resources
 C:\Users\Vadra\source\repos\Magasin-PC\Magasin PC\obj\Debug\net8.0-windows\Magasin PC.GeneratedMSBuildEditorConfig.editorconfig
 C:\Users\Vadra\source\repos\Magasin-PC\Magasin PC\obj\Debug\net8.0-windows\Magasin PC.AssemblyInfoInputs.cache
@@ -56,8 +52,6 @@ C:\Users\Vadra\source\repos\Magasin-PC\Magasin PC\obj\Debug\net8.0-windows\Resso
 C:\Users\Vadra\source\repos\Magasin-PC\Magasin PC\obj\Debug\net8.0-windows\Ressource\CheckBox\CheckBox.baml
 C:\Users\Vadra\source\repos\Magasin-PC\Magasin PC\obj\Debug\net8.0-windows\Ressource\ListBox\ListBox.baml
 C:\Users\Vadra\source\repos\Magasin-PC\Magasin PC\obj\Debug\net8.0-windows\Ressource\Couleur\Couleur.baml
-C:\Users\Vadra\source\repos\Magasin-PC\Magasin PC\obj\Debug\net8.0-windows\ConfirmationWindow.baml
-C:\Users\Vadra\source\repos\Magasin-PC\Magasin PC\obj\Debug\net8.0-windows\ConfirmationWindow.g.cs
 C:\Users\Vadra\source\repos\Magasin-PC\Magasin PC\obj\Debug\net8.0-windows\Ressource\Template\Template.baml
 C:\Users\Vadra\source\repos\Magasin-PC\Magasin PC\obj\Debug\net8.0-windows\Ressource\ComboBox.baml
 C:\Users\Vadra\source\repos\Magasin-PC\Magasin PC\bin\Debug\net8.0-windows\BouncyCastle.Cryptography.dll
@@ -73,10 +67,16 @@ C:\Users\Vadra\source\repos\Magasin-PC\Magasin PC\bin\Debug\net8.0-windows\runti
 C:\Users\Vadra\source\repos\Magasin-PC\Magasin PC\bin\Debug\net8.0-windows\runtimes\win-x64\native\k5sprt64.dll
 C:\Users\Vadra\source\repos\Magasin-PC\Magasin PC\bin\Debug\net8.0-windows\runtimes\win-x64\native\krb5_64.dll
 C:\Users\Vadra\source\repos\Magasin-PC\Magasin PC\bin\Debug\net8.0-windows\runtimes\win-x64\native\krbcc64.dll
-C:\Users\Vadra\source\repos\Magasin-PC\Magasin PC\obj\Debug\net8.0-windows\SettingBDDWindow.baml
-C:\Users\Vadra\source\repos\Magasin-PC\Magasin PC\obj\Debug\net8.0-windows\SettingStorageWindow.baml
-C:\Users\Vadra\source\repos\Magasin-PC\Magasin PC\obj\Debug\net8.0-windows\SettingBDDWindow.g.cs
-C:\Users\Vadra\source\repos\Magasin-PC\Magasin PC\obj\Debug\net8.0-windows\SettingStorageWindow.g.cs
 C:\Users\Vadra\source\repos\Magasin-PC\Magasin PC\bin\Debug\net8.0-windows\Renci.SshNet.dll
-C:\Users\Vadra\source\repos\Magasin-PC\Magasin PC\obj\Debug\net8.0-windows\SettingWindow.g.cs
-C:\Users\Vadra\source\repos\Magasin-PC\Magasin PC\obj\Debug\net8.0-windows\SettingWindow.baml
+C:\Users\Vadra\source\repos\Magasin-PC\Magasin PC\obj\Debug\net8.0-windows\Fenêtre\ConfirmationWindow.baml
+C:\Users\Vadra\source\repos\Magasin-PC\Magasin PC\obj\Debug\net8.0-windows\Fenêtre\SettingBDDWindow.baml
+C:\Users\Vadra\source\repos\Magasin-PC\Magasin PC\obj\Debug\net8.0-windows\Fenêtre\SettingStorageWindow.baml
+C:\Users\Vadra\source\repos\Magasin-PC\Magasin PC\obj\Debug\net8.0-windows\Fenêtre\AppInfoWindow.g.cs
+C:\Users\Vadra\source\repos\Magasin-PC\Magasin PC\obj\Debug\net8.0-windows\Fenêtre\ConfirmationWindow.g.cs
+C:\Users\Vadra\source\repos\Magasin-PC\Magasin PC\obj\Debug\net8.0-windows\Fenêtre\MainWindow.g.cs
+C:\Users\Vadra\source\repos\Magasin-PC\Magasin PC\obj\Debug\net8.0-windows\Fenêtre\SettingBDDWindow.g.cs
+C:\Users\Vadra\source\repos\Magasin-PC\Magasin PC\obj\Debug\net8.0-windows\Fenêtre\SettingStorageWindow.g.cs
+C:\Users\Vadra\source\repos\Magasin-PC\Magasin PC\obj\Debug\net8.0-windows\Fenêtre\SettingWindow.g.cs
+C:\Users\Vadra\source\repos\Magasin-PC\Magasin PC\obj\Debug\net8.0-windows\Fenêtre\AppInfoWindow.baml
+C:\Users\Vadra\source\repos\Magasin-PC\Magasin PC\obj\Debug\net8.0-windows\Fenêtre\MainWindow.baml
+C:\Users\Vadra\source\repos\Magasin-PC\Magasin PC\obj\Debug\net8.0-windows\Fenêtre\SettingWindow.baml

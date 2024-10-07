@@ -3,8 +3,60 @@
   "WorkspaceRootPath": "C:\\Users\\Vadra\\source\\repos\\Magasin-PC\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{920186BE-E22C-4BAF-AB58-F0C1297A5B2D}|Magasin PC\\Magasin PC.csproj|c:\\users\\vadra\\source\\repos\\magasin-pc\\magasin pc\\mainwindow.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{920186BE-E22C-4BAF-AB58-F0C1297A5B2D}|Magasin PC\\Magasin PC.csproj|solutionrelative:magasin pc\\mainwindow.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{920186BE-E22C-4BAF-AB58-F0C1297A5B2D}|Magasin PC\\Magasin PC.csproj|c:\\users\\vadra\\source\\repos\\magasin-pc\\magasin pc\\fen\u00EAtre\\mainwindow.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
+      "RelativeMoniker": "D:0:0:{920186BE-E22C-4BAF-AB58-F0C1297A5B2D}|Magasin PC\\Magasin PC.csproj|solutionrelative:magasin pc\\fen\u00EAtre\\mainwindow.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{920186BE-E22C-4BAF-AB58-F0C1297A5B2D}|Magasin PC\\Magasin PC.csproj|c:\\users\\vadra\\source\\repos\\magasin-pc\\magasin pc\\fen\u00EAtre\\confirmationwindow.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
+      "RelativeMoniker": "D:0:0:{920186BE-E22C-4BAF-AB58-F0C1297A5B2D}|Magasin PC\\Magasin PC.csproj|solutionrelative:magasin pc\\fen\u00EAtre\\confirmationwindow.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{920186BE-E22C-4BAF-AB58-F0C1297A5B2D}|Magasin PC\\Magasin PC.csproj|c:\\users\\vadra\\source\\repos\\magasin-pc\\magasin pc\\fen\u00EAtre\\mainwindow.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{920186BE-E22C-4BAF-AB58-F0C1297A5B2D}|Magasin PC\\Magasin PC.csproj|solutionrelative:magasin pc\\fen\u00EAtre\\mainwindow.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{920186BE-E22C-4BAF-AB58-F0C1297A5B2D}|Magasin PC\\Magasin PC.csproj|c:\\users\\vadra\\source\\repos\\magasin-pc\\magasin pc\\settings\\appmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{920186BE-E22C-4BAF-AB58-F0C1297A5B2D}|Magasin PC\\Magasin PC.csproj|solutionrelative:magasin pc\\settings\\appmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{920186BE-E22C-4BAF-AB58-F0C1297A5B2D}|Magasin PC\\Magasin PC.csproj|c:\\users\\vadra\\source\\repos\\magasin-pc\\magasin pc\\settings\\mainviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{920186BE-E22C-4BAF-AB58-F0C1297A5B2D}|Magasin PC\\Magasin PC.csproj|solutionrelative:magasin pc\\settings\\mainviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{920186BE-E22C-4BAF-AB58-F0C1297A5B2D}|Magasin PC\\Magasin PC.csproj|c:\\users\\vadra\\source\\repos\\magasin-pc\\magasin pc\\settings\\sftp\\sftpmanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{920186BE-E22C-4BAF-AB58-F0C1297A5B2D}|Magasin PC\\Magasin PC.csproj|solutionrelative:magasin pc\\settings\\sftp\\sftpmanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{920186BE-E22C-4BAF-AB58-F0C1297A5B2D}|Magasin PC\\Magasin PC.csproj|c:\\users\\vadra\\source\\repos\\magasin-pc\\magasin pc\\settings\\database\\databasemanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{920186BE-E22C-4BAF-AB58-F0C1297A5B2D}|Magasin PC\\Magasin PC.csproj|solutionrelative:magasin pc\\settings\\database\\databasemanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{920186BE-E22C-4BAF-AB58-F0C1297A5B2D}|Magasin PC\\Magasin PC.csproj|c:\\users\\vadra\\source\\repos\\magasin-pc\\magasin pc\\fen\u00EAtre\\appinfowindow.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{920186BE-E22C-4BAF-AB58-F0C1297A5B2D}|Magasin PC\\Magasin PC.csproj|solutionrelative:magasin pc\\fen\u00EAtre\\appinfowindow.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{920186BE-E22C-4BAF-AB58-F0C1297A5B2D}|Magasin PC\\Magasin PC.csproj|c:\\users\\vadra\\source\\repos\\magasin-pc\\magasin pc\\fen\u00EAtre\\settingwindow.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{920186BE-E22C-4BAF-AB58-F0C1297A5B2D}|Magasin PC\\Magasin PC.csproj|solutionrelative:magasin pc\\fen\u00EAtre\\settingwindow.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{920186BE-E22C-4BAF-AB58-F0C1297A5B2D}|Magasin PC\\Magasin PC.csproj|c:\\users\\vadra\\source\\repos\\magasin-pc\\magasin pc\\fen\u00EAtre\\settingbddwindow.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{920186BE-E22C-4BAF-AB58-F0C1297A5B2D}|Magasin PC\\Magasin PC.csproj|solutionrelative:magasin pc\\fen\u00EAtre\\settingbddwindow.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{920186BE-E22C-4BAF-AB58-F0C1297A5B2D}|Magasin PC\\Magasin PC.csproj|c:\\users\\vadra\\source\\repos\\magasin-pc\\magasin pc\\settings\\maxheightconverter.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{920186BE-E22C-4BAF-AB58-F0C1297A5B2D}|Magasin PC\\Magasin PC.csproj|solutionrelative:magasin pc\\settings\\maxheightconverter.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{920186BE-E22C-4BAF-AB58-F0C1297A5B2D}|Magasin PC\\Magasin PC.csproj|c:\\users\\vadra\\source\\repos\\magasin-pc\\magasin pc\\settings\\sftp\\sftpclient.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{920186BE-E22C-4BAF-AB58-F0C1297A5B2D}|Magasin PC\\Magasin PC.csproj|solutionrelative:magasin pc\\settings\\sftp\\sftpclient.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{920186BE-E22C-4BAF-AB58-F0C1297A5B2D}|Magasin PC\\Magasin PC.csproj|c:\\users\\vadra\\source\\repos\\magasin-pc\\magasin pc\\fen\u00EAtre\\appinfowindow.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
+      "RelativeMoniker": "D:0:0:{920186BE-E22C-4BAF-AB58-F0C1297A5B2D}|Magasin PC\\Magasin PC.csproj|solutionrelative:magasin pc\\fen\u00EAtre\\appinfowindow.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{920186BE-E22C-4BAF-AB58-F0C1297A5B2D}|Magasin PC\\Magasin PC.csproj|c:\\users\\vadra\\source\\repos\\magasin-pc\\magasin pc\\fen\u00EAtre\\settingbddwindow.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
+      "RelativeMoniker": "D:0:0:{920186BE-E22C-4BAF-AB58-F0C1297A5B2D}|Magasin PC\\Magasin PC.csproj|solutionrelative:magasin pc\\fen\u00EAtre\\settingbddwindow.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
     }
   ],
   "DocumentGroupContainers": [
@@ -14,25 +66,21 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 0,
+          "SelectedChildIndex": 7,
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 2,
               "Title": "MainWindow.xaml.cs",
-              "DocumentMoniker": "C:\\Users\\Vadra\\source\\repos\\Magasin-PC\\Magasin PC\\MainWindow.xaml.cs",
-              "RelativeDocumentMoniker": "Magasin PC\\MainWindow.xaml.cs",
-              "ToolTip": "C:\\Users\\Vadra\\source\\repos\\Magasin-PC\\Magasin PC\\MainWindow.xaml.cs",
-              "RelativeToolTip": "Magasin PC\\MainWindow.xaml.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAdAAAAAAAAAA==",
+              "DocumentMoniker": "C:\\Users\\Vadra\\source\\repos\\Magasin-PC\\Magasin PC\\Fen\u00EAtre\\MainWindow.xaml.cs",
+              "RelativeDocumentMoniker": "Magasin PC\\Fen\u00EAtre\\MainWindow.xaml.cs",
+              "ToolTip": "C:\\Users\\Vadra\\source\\repos\\Magasin-PC\\Magasin PC\\Fen\u00EAtre\\MainWindow.xaml.cs",
+              "RelativeToolTip": "Magasin PC\\Fen\u00EAtre\\MainWindow.xaml.cs",
+              "ViewState": "AgIAAEYBAAAAAAAAAADgvy0BAAAaAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-09-29T23:52:08.655Z",
               "IsPinned": true,
               "EditorCaption": ""
-            },
-            {
-              "$type": "Bookmark",
-              "Name": "ST:128:0:{75188d03-9892-4ae2-abf1-207126247ce5}"
             },
             {
               "$type": "Bookmark",
@@ -41,6 +89,168 @@
             {
               "$type": "Bookmark",
               "Name": "ST:129:0:{1fc202d4-d401-403c-9834-5b218574bb67}"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "MainViewModel.cs",
+              "DocumentMoniker": "C:\\Users\\Vadra\\source\\repos\\Magasin-PC\\Magasin PC\\Settings\\MainViewModel.cs",
+              "RelativeDocumentMoniker": "Magasin PC\\Settings\\MainViewModel.cs",
+              "ToolTip": "C:\\Users\\Vadra\\source\\repos\\Magasin-PC\\Magasin PC\\Settings\\MainViewModel.cs",
+              "RelativeToolTip": "Magasin PC\\Settings\\MainViewModel.cs",
+              "ViewState": "AgIAAB8AAAAAAAAAAAAswDAAAAAaAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-10-06T13:35:32.978Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "SettingWindow.xaml.cs",
+              "DocumentMoniker": "C:\\Users\\Vadra\\source\\repos\\Magasin-PC\\Magasin PC\\Fen\u00EAtre\\SettingWindow.xaml.cs",
+              "RelativeDocumentMoniker": "Magasin PC\\Fen\u00EAtre\\SettingWindow.xaml.cs",
+              "ToolTip": "C:\\Users\\Vadra\\source\\repos\\Magasin-PC\\Magasin PC\\Fen\u00EAtre\\SettingWindow.xaml.cs",
+              "RelativeToolTip": "Magasin PC\\Fen\u00EAtre\\SettingWindow.xaml.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAALwAAAAIAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-10-05T17:32:32.79Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "AppInfoWindow.xaml.cs",
+              "DocumentMoniker": "C:\\Users\\Vadra\\source\\repos\\Magasin-PC\\Magasin PC\\Fen\u00EAtre\\AppInfoWindow.xaml.cs",
+              "RelativeDocumentMoniker": "Magasin PC\\Fen\u00EAtre\\AppInfoWindow.xaml.cs",
+              "ToolTip": "C:\\Users\\Vadra\\source\\repos\\Magasin-PC\\Magasin PC\\Fen\u00EAtre\\AppInfoWindow.xaml.cs",
+              "RelativeToolTip": "Magasin PC\\Fen\u00EAtre\\AppInfoWindow.xaml.cs",
+              "ViewState": "AgIAADIBAAAAAAAAAAAAwE8BAAAvAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-10-03T10:12:38.163Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 12,
+              "Title": "AppInfoWindow.xaml",
+              "DocumentMoniker": "C:\\Users\\Vadra\\source\\repos\\Magasin-PC\\Magasin PC\\Fen\u00EAtre\\AppInfoWindow.xaml",
+              "RelativeDocumentMoniker": "Magasin PC\\Fen\u00EAtre\\AppInfoWindow.xaml",
+              "ToolTip": "C:\\Users\\Vadra\\source\\repos\\Magasin-PC\\Magasin PC\\Fen\u00EAtre\\AppInfoWindow.xaml",
+              "RelativeToolTip": "Magasin PC\\Fen\u00EAtre\\AppInfoWindow.xaml",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
+              "WhenOpened": "2024-10-03T10:34:34.009Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "MainWindow.xaml",
+              "DocumentMoniker": "C:\\Users\\Vadra\\source\\repos\\Magasin-PC\\Magasin PC\\Fen\u00EAtre\\MainWindow.xaml",
+              "RelativeDocumentMoniker": "Magasin PC\\Fen\u00EAtre\\MainWindow.xaml",
+              "ToolTip": "C:\\Users\\Vadra\\source\\repos\\Magasin-PC\\Magasin PC\\Fen\u00EAtre\\MainWindow.xaml",
+              "RelativeToolTip": "Magasin PC\\Fen\u00EAtre\\MainWindow.xaml",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
+              "WhenOpened": "2024-10-06T13:31:29.086Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "ConfirmationWindow.xaml",
+              "DocumentMoniker": "C:\\Users\\Vadra\\source\\repos\\Magasin-PC\\Magasin PC\\Fen\u00EAtre\\ConfirmationWindow.xaml",
+              "RelativeDocumentMoniker": "Magasin PC\\Fen\u00EAtre\\ConfirmationWindow.xaml",
+              "ToolTip": "C:\\Users\\Vadra\\source\\repos\\Magasin-PC\\Magasin PC\\Fen\u00EAtre\\ConfirmationWindow.xaml",
+              "RelativeToolTip": "Magasin PC\\Fen\u00EAtre\\ConfirmationWindow.xaml",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
+              "WhenOpened": "2024-10-06T21:48:35.973Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "SFTPManager.cs",
+              "DocumentMoniker": "C:\\Users\\Vadra\\source\\repos\\Magasin-PC\\Magasin PC\\Settings\\SFTP\\SFTPManager.cs",
+              "RelativeDocumentMoniker": "Magasin PC\\Settings\\SFTP\\SFTPManager.cs",
+              "ToolTip": "C:\\Users\\Vadra\\source\\repos\\Magasin-PC\\Magasin PC\\Settings\\SFTP\\SFTPManager.cs",
+              "RelativeToolTip": "Magasin PC\\Settings\\SFTP\\SFTPManager.cs",
+              "ViewState": "AgIAAAUAAAAAAAAAAAAkwCEAAAAIAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-10-07T09:39:42.305Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "AppModel.cs",
+              "DocumentMoniker": "C:\\Users\\Vadra\\source\\repos\\Magasin-PC\\Magasin PC\\Settings\\AppModel.cs",
+              "RelativeDocumentMoniker": "Magasin PC\\Settings\\AppModel.cs",
+              "ToolTip": "C:\\Users\\Vadra\\source\\repos\\Magasin-PC\\Magasin PC\\Settings\\AppModel.cs",
+              "RelativeToolTip": "Magasin PC\\Settings\\AppModel.cs",
+              "ViewState": "AgIAAAQAAAAAAAAAAAAiwBAAAAA4AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-10-03T22:55:30.824Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 9,
+              "Title": "SettingBDDWindow.xaml.cs",
+              "DocumentMoniker": "C:\\Users\\Vadra\\source\\repos\\Magasin-PC\\Magasin PC\\Fen\u00EAtre\\SettingBDDWindow.xaml.cs",
+              "RelativeDocumentMoniker": "Magasin PC\\Fen\u00EAtre\\SettingBDDWindow.xaml.cs",
+              "ToolTip": "C:\\Users\\Vadra\\source\\repos\\Magasin-PC\\Magasin PC\\Fen\u00EAtre\\SettingBDDWindow.xaml.cs",
+              "RelativeToolTip": "Magasin PC\\Fen\u00EAtre\\SettingBDDWindow.xaml.cs",
+              "ViewState": "AgIAAAgAAAAAAAAAAAAEwBsAAAAXAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-10-04T00:06:37.036Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "DataBaseManager.cs",
+              "DocumentMoniker": "C:\\Users\\Vadra\\source\\repos\\Magasin-PC\\Magasin PC\\Settings\\Database\\DataBaseManager.cs",
+              "RelativeDocumentMoniker": "Magasin PC\\Settings\\Database\\DataBaseManager.cs",
+              "ToolTip": "C:\\Users\\Vadra\\source\\repos\\Magasin-PC\\Magasin PC\\Settings\\Database\\DataBaseManager.cs",
+              "RelativeToolTip": "Magasin PC\\Settings\\Database\\DataBaseManager.cs",
+              "ViewState": "AgIAAIgAAAAAAAAAAAAtwJ4AAAAQAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-10-03T10:29:15.905Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 11,
+              "Title": "SFTPClient.cs",
+              "DocumentMoniker": "C:\\Users\\Vadra\\source\\repos\\Magasin-PC\\Magasin PC\\Settings\\SFTP\\SFTPClient.cs",
+              "RelativeDocumentMoniker": "Magasin PC\\Settings\\SFTP\\SFTPClient.cs",
+              "ToolTip": "C:\\Users\\Vadra\\source\\repos\\Magasin-PC\\Magasin PC\\Settings\\SFTP\\SFTPClient.cs",
+              "RelativeToolTip": "Magasin PC\\Settings\\SFTP\\SFTPClient.cs",
+              "ViewState": "AgIAABUAAAAAAAAAAAAowDIAAAAxAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-10-03T23:31:53.585Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 10,
+              "Title": "MaxHeightConverter.cs",
+              "DocumentMoniker": "C:\\Users\\Vadra\\source\\repos\\Magasin-PC\\Magasin PC\\Settings\\MaxHeightConverter.cs",
+              "RelativeDocumentMoniker": "Magasin PC\\Settings\\MaxHeightConverter.cs",
+              "ToolTip": "C:\\Users\\Vadra\\source\\repos\\Magasin-PC\\Magasin PC\\Settings\\MaxHeightConverter.cs",
+              "RelativeToolTip": "Magasin PC\\Settings\\MaxHeightConverter.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-10-07T14:06:43.429Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 13,
+              "Title": "SettingBDDWindow.xaml",
+              "DocumentMoniker": "C:\\Users\\Vadra\\source\\repos\\Magasin-PC\\Magasin PC\\Fen\u00EAtre\\SettingBDDWindow.xaml",
+              "RelativeDocumentMoniker": "Magasin PC\\Fen\u00EAtre\\SettingBDDWindow.xaml",
+              "ToolTip": "C:\\Users\\Vadra\\source\\repos\\Magasin-PC\\Magasin PC\\Fen\u00EAtre\\SettingBDDWindow.xaml",
+              "RelativeToolTip": "Magasin PC\\Fen\u00EAtre\\SettingBDDWindow.xaml",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
+              "WhenOpened": "2024-10-03T23:39:59.204Z"
             }
           ]
         }
