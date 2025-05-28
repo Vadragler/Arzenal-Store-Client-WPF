@@ -9,168 +9,8 @@ namespace Arzenal_Store_Client_WPF.Services.Database
 {
     public class DatabaseManager
     {
-        private readonly ApiService _apiService;
 
         private List<PendingDatabaseAction> _pendingActions = new List<PendingDatabaseAction>();
-        public ObservableCollection<OperatingSystemModel> OperatingSystems { get; } = new ObservableCollection<OperatingSystemModel>();
-
-        public ObservableCollection<TagModel> Tag { get; } = new ObservableCollection<TagModel>();
-
-        public ObservableCollection<CategorieModel> Categorie { get; } = new ObservableCollection<CategorieModel>();
-
-        public ObservableCollection<LanguageModel> Language { get; } = new ObservableCollection<LanguageModel>();
-
-
-        public DatabaseManager(ApiService apiService)
-        {
-            _apiService = apiService;
-        }
-
-        public async Task<List<AppModel>> GetAppsAsync()
-        {
-            try
-            {
-                // Appel à l'API pour récupérer les applications
-                var apps = await _apiService.GetAsync<List<AppModel>>("apps");
-                return apps;
-            }
-            catch
-            {
-                return null;
-            }
-        }
-
-        public async Task<bool> AddAsync(string tableName, string name, int? operatingSystemId = null)
-        {
-            try
-            {
-                object data = null;
-
-                if (tableName == "OperatingSystems")
-                {
-                    data = new { Name = name };
-                    await _apiService.PostAsync<object>("operatingsystems", data);
-                }
-                else if (tableName == "Languages")
-                {
-                    data = new { Name = name };
-                    await _apiService.PostAsync<object>("languages", data);
-                }
-                else if (tableName == "Tags")
-                {
-                    data = new { Name = name };
-                    await _apiService.PostAsync<object>("tags", data);
-                }
-                else if (tableName == "Categories")
-                {
-                    data = new { Name = name };
-                    await _apiService.PostAsync<object>("categories", data);
-                }
-                else
-                {
-                    throw new ArgumentException("Invalid table name.");
-                }
-
-                return true;
-            }
-            catch (Exception)
-            {
-                return false;
-            }
-        }
-
-        public async Task<bool> UpdateAsync(string tableName, int id, string name)
-        {
-            try
-            {
-                object data = new { Name = name };
-
-                if (tableName == "OperatingSystems")
-                {
-                    await _apiService.PutAsync<object>($"operatingsystems/{id}", data);
-                }
-                else if (tableName == "Languages")
-                {
-                    await _apiService.PutAsync<object>($"languages/{id}", data);
-                }
-                else if (tableName == "Tags")
-                {
-                    await _apiService.PutAsync<object>($"tags/{id}", data);
-                }
-                else if (tableName == "Categories")
-                {
-                    await _apiService.PutAsync<object>($"categories/{id}", data);
-                }
-                else
-                {
-                    throw new ArgumentException("Invalid table name.");
-                }
-
-                return true;
-            }
-            catch (Exception)
-            {
-                return false;
-            }
-        }
-
-        private async Task UpdateAppRelationsAsync(Guid appId, string tableName, string columnId, List<int> selectedIds)
-        {
-            try
-            {
-                // Supprimer les relations actuelles
-                await _apiService.DeleteAsync($"apps/{appId}/{tableName}");
-
-                // Ajouter les nouvelles relations
-                foreach (var id in selectedIds)
-                {
-                    var data = new { AppId = appId, Id = id };
-                    await _apiService.PostAsync<object>($"apps/{appId}/{tableName}", data);
-                }
-            }
-            catch (Exception)
-            {
-            }
-        }
-
-
-        public async Task<bool> DeleteAsync(string tableName, int id)
-        {
-            try
-            {
-                // Appeler l'API pour supprimer l'enregistrement
-                if (tableName == "OperatingSystems")
-                {
-                    await _apiService.DeleteAsync($"operatingsystems/{id}");
-                }
-                else if (tableName == "Languages")
-                {
-                    await _apiService.DeleteAsync($"languages/{id}");
-                }
-                else if (tableName == "Tags")
-                {
-                    await _apiService.DeleteAsync($"tags/{id}");
-                }
-                else if (tableName == "Categories")
-                {
-                    await _apiService.DeleteAsync($"categories/{id}");
-                }
-                else if (tableName == "Apps")
-                {
-                    await _apiService.DeleteAsync($"apps/{id}");
-                }
-                else
-                {
-                    throw new ArgumentException("Invalid table name.");
-                }
-
-                return true;
-            }
-            catch (Exception)
-            {
-                return false;
-            }
-        }
 
 
         public void SavePendingAction(string actionType, string tableName, int? id, string? name, int? operatingSystemId = null)
@@ -220,15 +60,15 @@ namespace Arzenal_Store_Client_WPF.Services.Database
                     {
                         if (action.ActionType == "Update")
                         {
-                            bool success = await UpdateAsync(tableName, (int)action.UpdateId!, action.UpdateName! ?? action.OSVersionName!);
+                            //bool success = await UpdateAsync(tableName, (int)action.UpdateId!, action.UpdateName! ?? action.OSVersionName!);
                         }
                         else if (action.ActionType == "Insert")
                         {
-                            bool success = await AddAsync(tableName, action.UpdateName! ?? action.OSVersionName!, action.OperatingSystemId);
+                            //bool success = await AddAsync(tableName, action.UpdateName! ?? action.OSVersionName!, action.OperatingSystemId);
                         }
                         else if (action.ActionType == "Delete")
                         {
-                            bool success = await DeleteAsync(tableName, (int)action.UpdateId!);
+                            //bool success = await DeleteAsync(tableName, (int)action.UpdateId!);
                         }
 
                         // Ajouter l'action à la liste à supprimer si elle s'est exécutée correctement

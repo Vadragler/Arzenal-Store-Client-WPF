@@ -22,8 +22,6 @@
                 pack://application:,,,/Magasin_PC;component/Fonts/#Poppins
             </FontFamily>
 
-
-
             <!-- Appliquer globalement -->
             <Style TargetType="TextBlock">
                 <Setter Property="FontFamily" Value="{StaticResource PoppinsFont}" />
