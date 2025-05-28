@@ -1,0 +1,39 @@
+﻿<Application x:Class="Arzenal_Store_Client_WPF.App"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:local="clr-namespace:Arzenal_Store_Client_WPF">
+
+    <Application.Resources>
+        <ResourceDictionary>
+            <ResourceDictionary.MergedDictionaries>
+                <ResourceDictionary Source="Ressources/Icons/Icons.xaml"/>
+                <ResourceDictionary Source="Ressources/Boutons/Boutons.xaml"/>
+                <ResourceDictionary Source="Ressources/CheckBox/CheckBox.xaml"/>
+                <ResourceDictionary Source="Ressources/ListBox/ListBox.xaml"/>
+                <ResourceDictionary Source="Ressources/Couleur/Couleur.xaml"/>
+                <ResourceDictionary Source="Ressources/ComboBox.xaml"/>
+                <ResourceDictionary Source="Ressources/Template/AppTemplate.xaml"/>
+                <ResourceDictionary Source="Ressources/Template/AppDetailTemplate.xaml"/>
+            </ResourceDictionary.MergedDictionaries>
+            <Style TargetType="{x:Type FrameworkElement}">
+                <Setter Property="FocusVisualStyle" Value="{x:Null}" />
+            </Style>
+            <FontFamily x:Key="PoppinsFont">
+                pack://application:,,,/Magasin_PC;component/Fonts/#Poppins
+            </FontFamily>
+
+
+
+            <!-- Appliquer globalement -->
+            <Style TargetType="TextBlock">
+                <Setter Property="FontFamily" Value="{StaticResource PoppinsFont}" />
+            </Style>
+            <Style TargetType="Button">
+                <Setter Property="FontFamily" Value="{StaticResource PoppinsFont}" />
+            </Style>
+            <Style TargetType="TextBox">
+                <Setter Property="FontFamily" Value="{StaticResource PoppinsFont}" />
+            </Style>
+        </ResourceDictionary>
+    </Application.Resources>
+</Application>

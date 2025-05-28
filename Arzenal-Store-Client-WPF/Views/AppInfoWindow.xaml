@@ -1,0 +1,147 @@
+﻿<Window x:Class="Arzenal_Store_Client_WPF.AppInfoWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Arzenal_Store_Client_WPF"
+        mc:Ignorable="d"
+        Title="AppInfoWindow" Height="870" Width="600" MinWidth="400" MinHeight="570">
+
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="Auto"/>
+        </Grid.RowDefinitions>
+
+        <!-- Contenu défilant -->
+        <ScrollViewer VerticalScrollBarVisibility="Auto" Grid.Row="0">
+            <StackPanel>
+
+                <!-- Section pour l'icône de l'application -->
+                <TextBlock Text="Icône de l'application:" Style="{StaticResource ModernTextBlock}" Margin="10,10,10,0"/>
+                <Grid>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="*"/>
+                        <ColumnDefinition Width="Auto"/>
+                    </Grid.ColumnDefinitions>
+                    <TextBox x:Name="AppIconPathTextBox" Style="{StaticResource ModernTextBox}" Grid.Column="0" Margin="10,0,0,0"/>
+                    <Button Style="{StaticResource IconButtonStyle}" Height="20" Tag="{StaticResource UploadIcon}" Grid.Column="1" Click="BrowseIcon_Click" Margin="10,0,10,0"/>
+                </Grid>
+                <Image x:Name="AppIconImage" Width="50" Height="50" Margin="20,5,0,5" HorizontalAlignment="Left"/>
+
+                <!-- Section pour le nom de l'application -->
+                <TextBlock Text="Nom de l'application:" Style="{StaticResource ModernTextBlock}" Margin="10,10,10,0"/>
+                <TextBox x:Name="AppNameTextBox" Style="{StaticResource ModernTextBox}" Margin="10,5,10,10"/>
+                <TextBlock Text="Ce nom est déjà utilisé" Style="{StaticResource ModernTextBlock}" Foreground="Red" x:Name="WarningTextName" Margin="10,0,10,10" Visibility="Collapsed"/>
+
+                <!-- Section pour les tags de l'application -->
+                <TextBlock Text="Tags:" Style="{StaticResource ModernTextBlock}" Margin="10,0,10,0"/>
+                <ComboBox x:Name="TagComboBox" DisplayMemberPath="Name" SelectedValuePath="Id" Style="{StaticResource ModernComboBox}" Margin="10,5,10,10"
+                          IsEditable="False" 
+                          IsTextSearchEnabled="True" 
+                          SelectionChanged="TagComboBox_SelectionChanged" 
+                          Height="30" Width="200"/>
+                <ListBox x:Name="SelectedTagsListBox" Style="{StaticResource ModernListBox}" Margin="10,5,10,10" Height="100" SelectionChanged="SelectedTagsListBox_SelectionChanged">
+                    <ListBox.ItemTemplate>
+                        <DataTemplate>
+                            <Grid>
+                                <Grid.ColumnDefinitions>
+                                    <ColumnDefinition Width="*"/>
+                                    <ColumnDefinition Width="Auto"/>
+                                </Grid.ColumnDefinitions>
+                                <TextBlock Text="{Binding}" VerticalAlignment="Center"/>
+                                <Button Content="Supprimer" Style="{StaticResource TagButtonStyle}" Click="RemoveTag_Click" Grid.Column="1" Tag="{Binding}"/>
+                            </Grid>
+                        </DataTemplate>
+                    </ListBox.ItemTemplate>
+                </ListBox>
+
+                <!-- Section pour la version de l'application -->
+                <TextBlock Text="Version:" Style="{StaticResource ModernTextBlock}" Margin="10,0,10,0"/>
+                <TextBox x:Name="AppVersionTextBox" Style="{StaticResource ModernTextBox}" Margin="10,5,10,10"/>
+
+                <!-- Section pour la description de l'application -->
+                <TextBlock Text="Description:" Style="{StaticResource ModernTextBlock}" Margin="10,0,10,0"/>
+                <TextBox x:Name="AppDescriptionTextBox" Style="{StaticResource ModernTextBox}" Margin="10,5,10,10" Height="100" AcceptsReturn="True" TextWrapping="Wrap"/>
+
+                <!-- Section pour le chemin d'accès -->
+                <TextBlock Text="Chemin d'accès:" Style="{StaticResource ModernTextBlock}" Margin="10,0,10,0"/>
+                <Grid>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="*"/>
+                        <ColumnDefinition Width="Auto"/>
+                    </Grid.ColumnDefinitions>
+                    <TextBox x:Name="AppFilePathBox" Style="{StaticResource ModernTextBox}" Margin="10,5,0,10" HorizontalAlignment="Stretch"/>
+                    <Button x:Name="AppFilePathButton" Style="{StaticResource IconButtonStyle}" Tag="{StaticResource UploadIcon}" Height="20" Width="20" Grid.Column="1"  Margin="10,5,10,10"  Click="ModifyFilePath_Click"/>
+                </Grid>
+                <TextBlock Text="Ce chemin d'accès est déjà utilisé" Style="{StaticResource ModernTextBlock}" Foreground="Red" x:Name="WarningTextFilePath" Margin="10,0,10,10" Visibility="Collapsed"/>
+
+                <!-- Section pour la visibilité de l'application -->
+                <TextBlock Text="Visible:" Style="{StaticResource ModernTextBlock}" Margin="10,0,10,0"/>
+                <CheckBox x:Name="AppIsVisibleCheckBox" Style="{StaticResource ModernCheckBox}" IsChecked="False" Margin="10,0,10,10"/>
+
+                <!-- Section pour la catégorie de l'application -->
+                <TextBlock Text="Catégorie:" Style="{StaticResource ModernTextBlock}" Margin="10,0,10,0"/>
+                <ComboBox x:Name="CategorieComboBox" DisplayMemberPath="Name" SelectedValuePath="Id" Style="{StaticResource ModernComboBox}" Margin="10,5,10,10" 
+                          IsEditable="False" 
+                          IsTextSearchEnabled="True" Height="30" Width="200"/>
+
+                <!-- Section pour la taille de l'application -->
+                <TextBlock Text="Taille de l'application (en Mo):" Style="{StaticResource ModernTextBlock}" Margin="10,0,10,0"/>
+                <TextBox x:Name="AppSizeTextBox" Style="{StaticResource ModernTextBox}" Margin="10,5,10,10"/>
+
+                <!-- Section pour les langues disponibles -->
+                <TextBlock Text="Langues disponibles:" Style="{StaticResource ModernTextBlock}" Margin="10,0,10,0"/>
+                <ComboBox x:Name="LanguageComboBox" DisplayMemberPath="Name" SelectedValuePath="Id" Style="{StaticResource ModernComboBox}" Margin="10,5,10,10"  
+                          SelectionChanged="LanguagesComboBox_SelectionChanged" Height="30" Width="200"/>
+                <ListBox x:Name="SelectedLanguagesListBox" Style="{StaticResource ModernListBox}" Margin="10,5,10,10" Height="100">
+                    <ListBox.ItemTemplate>
+                        <DataTemplate>
+                            <Grid>
+                                <Grid.ColumnDefinitions>
+                                    <ColumnDefinition Width="*"/>
+                                    <ColumnDefinition Width="Auto"/>
+                                </Grid.ColumnDefinitions>
+                                <TextBlock Text="{Binding}" VerticalAlignment="Center"/>
+                                <Button Content="Supprimer" Style="{StaticResource TagButtonStyle}" Click="RemoveLanguage_Click" Grid.Column="1" Tag="{Binding}"/>
+                            </Grid>
+                        </DataTemplate>
+                    </ListBox.ItemTemplate>
+                </ListBox>
+
+                <!-- Section pour les conditions requises -->
+                <TextBlock Text="Conditions requises:" Style="{StaticResource ModernTextBlock}" Margin="10,0,10,0"/>
+                <TextBox x:Name="AppRequirementsTextBox" Style="{StaticResource ModernTextBox}" Margin="10,5,10,10"/>
+
+                <!-- Section pour les OS -->
+                <TextBlock Text="Systèmes d'exploitation:" Style="{StaticResource ModernTextBlock}" Margin="10,0,10,0"/>
+                <ComboBox x:Name="OSComboBox" DisplayMemberPath="Name" SelectedValuePath="Id" Style="{StaticResource ModernComboBox}" Margin="10,5,10,10"
+                          ItemsSource="{Binding AvailableOS.Name}" 
+                          SelectionChanged="OSComboBox_SelectionChanged" Height="30" Width="200"/>
+                <ListBox x:Name="SelectedOSListBox" ItemsSource="{Binding selectedOS}" Style="{StaticResource ModernListBox}" Margin="10,5,10,10" Height="100">
+                    <ListBox.ItemTemplate>
+                        <DataTemplate>
+                            <Grid>
+                                <Grid.ColumnDefinitions>
+                                    <ColumnDefinition Width="*"/>
+                                    <ColumnDefinition Width="Auto"/>
+                                </Grid.ColumnDefinitions>
+                                <TextBlock Text="{Binding}" VerticalAlignment="Center"/>
+                                <Button Content="Supprimer" Style="{StaticResource TagButtonStyle}" Click="RemoveOS_Click" Grid.Column="1" Tag="{Binding}"/>
+                            </Grid>
+                        </DataTemplate>
+                    </ListBox.ItemTemplate>
+                </ListBox>
+
+            </StackPanel>
+        </ScrollViewer>
+
+        <!-- Boutons Enregistrer et Annuler fixes -->
+        <Grid VerticalAlignment="Bottom" Margin="0,10,0,10" Grid.Row="1">
+            <StackPanel Orientation="Horizontal" HorizontalAlignment="Right">
+                <Button Content="Annuler" Margin="0,0,10,0" Width="100" Height="30" Click="CancelButton_Click" Style="{StaticResource ButtonStyle}"/>
+                <Button Content="Enregistrer" Margin="0,0,10,0" Width="100" Height="30" Click="SaveButton_Click" Style="{StaticResource ButtonStyle}"/>
+            </StackPanel>
+        </Grid>
+    </Grid>
+</Window>

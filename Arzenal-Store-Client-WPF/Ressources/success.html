@@ -1,0 +1,60 @@
+﻿<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <title>Connexion réussie</title>
+    <style>
+        @font-face {
+            font-family: 'Poppins';
+            src: url('http://localhost:56525/assets/fonts/poppins/Poppins-Regular.ttf') format('truetype');
+        }
+        body {
+            background-color: #f0f2f5;
+            font-family: 'Poppins', sans-serif;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+            margin: 0;
+        }
+
+        .container {
+            background-color: white;
+            padding: 30px 40px;
+            border-radius: 12px;
+            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+            text-align: center;
+            animation: fadeIn 1s ease-out;
+        }
+
+        h1 {
+            color: #28a745;
+            margin-bottom: 10px;
+        }
+
+        p {
+            font-size: 1.1em;
+            color: #333;
+            margin-bottom: 20px;
+        }
+
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+                transform: scale(0.95);
+            }
+
+            to {
+                opacity: 1;
+                transform: scale(1);
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Connexion réussie !</h1>
+        <p>Vous pouvez maintenant fermer cette page.</p>
+    </div>
+</body>
+</html>
