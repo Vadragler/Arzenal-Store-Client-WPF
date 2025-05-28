@@ -69,3 +69,4 @@ Le client WPF communique avec l’API Arzenal-Store-Api et nécessite une authen
 - Gestion automatique du rafraîchissement du token JWT
 - Réorganisation de l’application en créant un dossier dédié à la logique métier, afin de mieux structurer l'application.  
   D'autres ajustements dans l’organisation du projet sont également prévus.
+- Tests unitaires
