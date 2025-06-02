@@ -4,6 +4,7 @@
 ![Platform](https://img.shields.io/badge/Platform-Windows-lightgrey)
 ![UI](https://img.shields.io/badge/UI-WPF-purple)
 ![Language](https://img.shields.io/badge/Language-C%23-blue)
+![License](https://img.shields.io/badge/Licence-Utilisation%20interdite-red)
 
 Client WPF de la plateforme **Arzenal Store**, développé en C# avec .NET 8.0.
 
