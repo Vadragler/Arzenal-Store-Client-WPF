@@ -30,10 +30,10 @@
             HorizontalAlignment="Left" 
             VerticalAlignment="Center" 
             Margin="0,0,10,0" 
-            Command="{Binding BackToListCommand}"/>
+            Command="{Binding DataContext.BackToListCommand, RelativeSource={RelativeSource AncestorType=Window}}"/>
 
                 <!-- Nom de l'application -->
-                <TextBlock Text="{Binding Name}" 
+                <TextBlock Text="{Binding App.Name}" 
                FontWeight="Bold" 
                FontSize="25" 
                Foreground="{StaticResource PrimaryBrush}" 
@@ -60,7 +60,7 @@
 
             <!-- Image de l'application -->
             <Image Grid.Row="1" Grid.Column="0" 
-       Source="{Binding Icone}" 
+       Source="{Binding Icon}" 
        Width="150" 
        Height="150" 
        Margin="10" 
@@ -79,53 +79,53 @@
                     <StackPanel Orientation="Horizontal" Margin="0,0,0,10">
                         <StackPanel Orientation="Vertical" Margin="0,0,20,0">
                             <TextBlock Text="Version:" Style="{StaticResource ModernTextBlock}" FontWeight="Bold" Foreground="Black" Margin="0,0,0,5"/>
-                            <TextBlock Text="{Binding Version}" Foreground="Gray" />
+                            <TextBlock Text="{Binding App.Version}" Foreground="Gray" />
                         </StackPanel>
                         <StackPanel Orientation="Vertical">
                             <TextBlock Text="Visible:" FontWeight="Bold" Style="{StaticResource ModernTextBlock}" Foreground="Black" Margin="0,0,0,5"/>
-                            <CheckBox IsChecked="{Binding IsVisible}" IsEnabled="False" Style="{StaticResource ModernCheckBox}" Margin="0,0,10,0"/>
+                            <CheckBox IsChecked="{Binding App.IsVisible}" IsEnabled="False" Style="{StaticResource ModernCheckBox}" Margin="0,0,10,0"/>
                         </StackPanel>
                     </StackPanel>
 
                     <!-- Section Catégorie -->
                     <TextBlock Text="Catégorie:" Style="{StaticResource ModernTextBlock}"  FontWeight="Bold" Foreground="Black" Margin="0,0,0,5"/>
-                    <TextBlock Text="{Binding Category.Name }" Foreground="Gray" Margin="0,0,0,10"/>
+                    <TextBlock Text="{Binding App.Category}" Foreground="Gray" Margin="0,0,0,10"/>
 
                     <!-- Section Tags (assumant une collection) -->
                     <TextBlock Text="Tags:" Style="{StaticResource ModernTextBlock}"  FontWeight="Bold" Foreground="Black" Margin="0,0,0,5"/>
-                    <ItemsControl ItemsSource="{Binding Tag}" Margin="0,0,0,10">
+                    <ItemsControl ItemsSource="{Binding App.Tags}" Margin="0,0,0,10">
                         <ItemsControl.ItemTemplate>
                             <DataTemplate>
-                                <TextBlock Text="{Binding Name}" Foreground="Gray"/>
+                                <TextBlock Text="{Binding}" Foreground="Gray"/>
                             </DataTemplate>
                         </ItemsControl.ItemTemplate>
                     </ItemsControl>
 
                     <!-- Section Plateformes -->
                     <TextBlock Text="Plateformes:" Style="{StaticResource ModernTextBlock}"  FontWeight="Bold" Foreground="Black" Margin="0,0,0,5"/>
-                    <ItemsControl ItemsSource="{Binding OS}" Margin="0,0,0,10">
+                    <ItemsControl ItemsSource="{Binding App.OperatingSystems}" Margin="0,0,0,10">
                         <ItemsControl.ItemTemplate>
                             <DataTemplate>
-                                <TextBlock Text="{Binding Name}" Foreground="Gray"/>
+                                <TextBlock Text="{Binding}" Foreground="Gray"/>
                             </DataTemplate>
                         </ItemsControl.ItemTemplate>
                     </ItemsControl>
 
                     <!-- Section Conditions requises -->
                     <TextBlock Text="Conditions requises:" Style="{StaticResource ModernTextBlock}"  FontWeight="Bold" Foreground="Black" Margin="0,0,0,5"/>
-                    <TextBlock Text="{Binding Requirements}" TextWrapping="Wrap" Foreground="Gray" Margin="0,0,0,10"/>
+                    <TextBlock Text="{Binding App.Requirements}" TextWrapping="Wrap" Foreground="Gray" Margin="0,0,0,10"/>
 
                     <!-- Section Taille de l'application -->
                     <TextBlock Text="Taille de l'application:" Style="{StaticResource ModernTextBlock}"  FontWeight="Bold" Foreground="Black" Margin="0,0,0,5"/>
-                    <TextBlock Text="{Binding AppSize, StringFormat={}{0:N0} octets}" Foreground="Gray" Margin="0,0,0,10"/>
+                    <TextBlock Text="{Binding App.AppSize, StringFormat={}{0:N0} octets}" Foreground="Gray" Margin="0,0,0,10"/>
 
                     <!-- Section Langues disponibles -->
                     <!-- Section Langues disponibles (assumant une collection) -->
                     <TextBlock Text="Langues disponibles:" Style="{StaticResource ModernTextBlock}"  FontWeight="Bold" Foreground="Black" Margin="0,0,0,5"/>
-                    <ItemsControl ItemsSource="{Binding Languages}" Margin="0,0,0,10">
+                    <ItemsControl ItemsSource="{Binding App.Languages}" Margin="0,0,0,10">
                         <ItemsControl.ItemTemplate>
                             <DataTemplate>
-                                <TextBlock Text="{Binding Name}" Foreground="Gray"/>
+                                <TextBlock Text="{Binding}" Foreground="Gray"/>
                             </DataTemplate>
                         </ItemsControl.ItemTemplate>
                     </ItemsControl>
@@ -134,18 +134,18 @@
                     <StackPanel Orientation="Horizontal" Margin="0,0,0,10">
                         <StackPanel Orientation="Vertical" Margin="0,0,20,0">
                             <TextBlock Text="Date de publication:" Style="{StaticResource ModernTextBlock}"  FontWeight="Bold" Foreground="Black" Margin="0,0,0,5"/>
-                            <TextBlock Text="{Binding ReleaseDate, StringFormat={}{0:dd/MM/yyyy}}" Foreground="Gray"/>
+                            <TextBlock Text="{Binding App.ReleaseDate, StringFormat={}{0:dd/MM/yyyy}}" Foreground="Gray"/>
                         </StackPanel>
                         <StackPanel Orientation="Vertical">
                             <TextBlock Text="Dernière mise à jour:" Style="{StaticResource ModernTextBlock}"  FontWeight="Bold" Foreground="Black" Margin="0,0,0,5"/>
-                            <TextBlock Text="{Binding LastUpdated, StringFormat={}{0:dd/MM/yyyy}}" Foreground="Gray"/>
+                            <TextBlock Text="{Binding App.LastUpdated, StringFormat={}{0:dd/MM/yyyy}}" Foreground="Gray"/>
                         </StackPanel>
                     </StackPanel>
 
                     <!-- Section Description -->
                     <TextBlock Text="Description:" FontWeight="Bold" Foreground="Black" Margin="0,0,0,5"/>
                     <ScrollViewer VerticalScrollBarVisibility="Auto" HorizontalScrollBarVisibility="Disabled" MaxHeight="100">
-                        <TextBlock Text="{Binding Description}" Style="{StaticResource ModernTextBlock}"  TextWrapping="Wrap" Foreground="Black" Margin="0,0,0,5"/>
+                        <TextBlock Text="{Binding App.Description}" Style="{StaticResource ModernTextBlock}"  TextWrapping="Wrap" Foreground="Black" Margin="0,0,0,5"/>
                     </ScrollViewer>
                 </StackPanel>
             </Grid>

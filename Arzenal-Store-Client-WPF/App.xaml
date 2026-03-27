@@ -1,7 +1,8 @@
-﻿<Application x:Class="Arzenal_Store_Client_WPF.App"
+﻿<Application x:Class="Arzenal.StoreManager.WPF.App"
              xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
              xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
-             xmlns:local="clr-namespace:Arzenal_Store_Client_WPF">
+             xmlns:local="clr-namespace:Arzenal.StoreManager.WPF"
+             xmlns:conv="clr-namespace:Arzenal.StoreManager.WPF.Converters">
 
     <Application.Resources>
         <ResourceDictionary>
@@ -15,11 +16,18 @@
                 <ResourceDictionary Source="Ressources/Template/AppTemplate.xaml"/>
                 <ResourceDictionary Source="Ressources/Template/AppDetailTemplate.xaml"/>
             </ResourceDictionary.MergedDictionaries>
-            <Style TargetType="{x:Type FrameworkElement}">
+
+            <!-- Converters globaux -->
+            <conv:MaxHeightConverter x:Key="MaxHeightConverter"/>
+            <conv:NullToVisibilityConverter x:Key="NullToVisibilityConverter"/>
+            <conv:BoolToVisibilityConverter x:Key="BoolToVisibilityConverter"/>
+            
+
+            <Style TargetType="Control">
                 <Setter Property="FocusVisualStyle" Value="{x:Null}" />
             </Style>
             <FontFamily x:Key="PoppinsFont">
-                pack://application:,,,/Magasin_PC;component/Fonts/#Poppins
+                pack://application:,,,/Arzenal.StoreManager.WPF;component/Resources/Fonts/#Poppins
             </FontFamily>
 
             <!-- Appliquer globalement -->
