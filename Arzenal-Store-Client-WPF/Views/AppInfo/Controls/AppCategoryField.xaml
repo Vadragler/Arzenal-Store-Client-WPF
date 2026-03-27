@@ -1,0 +1,36 @@
+﻿<UserControl x:Class="Arzenal.StoreManager.WPF.Views.AppInfo.Controls.AppCategoryField"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:Arzenal.StoreManager.WPF.Views.AppInfo.Controls"
+             mc:Ignorable="d" 
+             d:DesignHeight="450" d:DesignWidth="800">
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <!-- TextBlock -->
+            <RowDefinition Height="Auto"/>
+            <!-- TextBox + Button -->
+            <RowDefinition Height="Auto"/>
+            <!-- Image -->
+        </Grid.RowDefinitions>
+
+        <!-- Section pour la catégorie de l'application -->
+        <TextBlock Text="Catégorie:"
+                   Style="{StaticResource ModernTextBlock}"
+                   Margin="10,0,10,0"
+                   Grid.Row="0"/>
+        <ComboBox x:Name="CategorieComboBox"
+                  ItemsSource="{Binding AvailableCategories}"
+                  DisplayMemberPath="Name"
+                  SelectedValuePath="Id"
+                  Style="{StaticResource ModernComboBox}"
+                  SelectedValue="{Binding SelectedCategory, Mode=TwoWay}"
+                  Margin="10,5,10,10"
+                  IsEditable="False"
+                  IsTextSearchEnabled="True"
+                  Height="30" Width="200"
+                  Grid.Row="1"/>
+    </Grid>
+</UserControl>

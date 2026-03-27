@@ -12,14 +12,14 @@
 
                 <!-- Image -->
                 <Image x:Name="AppIconImage" 
-                   Source="{Binding Icone}" 
+                   Source="{Binding Icon}" 
                    Width="{Binding ActualHeight, RelativeSource={RelativeSource AncestorType=ListBoxItem}}" 
                    Height="{Binding ActualHeight, RelativeSource={RelativeSource AncestorType=ListBoxItem}}"
                    Margin="5"/>
 
                 <!-- Informations sur l'application -->
                 <StackPanel Grid.Column="1" Width="Auto">
-                    <TextBlock Text="{Binding Name}" 
+                    <TextBlock Text="{Binding App.Name}" 
                            FontWeight="Bold" 
                            Foreground="{StaticResource PrimaryBrush}" 
                            Margin="10,0,0,5" 
@@ -30,7 +30,7 @@
                                Foreground="Gray" 
                                FontStyle="Italic" 
                                Margin="10,0,10,5"/>
-                        <ItemsControl ItemsSource="{Binding Tags}">
+                        <ItemsControl ItemsSource="{Binding App.Tags}">
                             <ItemsControl.ItemTemplate>
                                 <DataTemplate>
                                     <TextBlock Text="{Binding}" Foreground="Gray"/>
@@ -39,27 +39,27 @@
                         </ItemsControl>
                     </StackPanel>
 
-                    <TextBlock Text="{Binding Category, StringFormat=Catégorie: {0}}" 
+                    <TextBlock Text="{Binding App.Category}" 
                            Foreground="DarkSlateGray" 
                            Margin="10,0,10,0"/>
 
                     <StackPanel Orientation="Horizontal" Margin="10,5,0,0">
-                        <TextBlock Text="{Binding ReleaseDate, StringFormat=Date de publication: {0:dd/MM/yyyy}}" 
+                        <TextBlock Text="{Binding App.ReleaseDate, StringFormat=Date de publication: {0:dd/MM/yyyy}}" 
                                Foreground="Gray" 
                                Margin="0,0,10,0"/>
-                        <TextBlock Text="{Binding LastUpdated, StringFormat=Dernière mise à jour: {0:dd/MM/yyyy}}" 
+                        <TextBlock Text="{Binding App.LastUpdated, StringFormat=Dernière mise à jour: {0:dd/MM/yyyy}}" 
                                Foreground="Gray"/>
                     </StackPanel>
                 </StackPanel>
 
                 <!-- Version and Platform on the same line -->
                 <StackPanel Grid.Column="1" Orientation="Horizontal" HorizontalAlignment="Left" VerticalAlignment="Bottom" Margin="10,0,0,10">
-                    <TextBlock Text="{Binding Version}" 
+                    <TextBlock Text="{Binding App.Version}" 
                            Foreground="Gray" 
                            Margin="0,0,10,0"/>
                     <TextBlock Text="Plateforme : " 
                            Foreground="Gray"/>
-                    <ItemsControl ItemsSource="{Binding OperatingSystems}">
+                    <ItemsControl ItemsSource="{Binding App.OperatingSystems}">
                         <ItemsControl.ItemTemplate>
                             <DataTemplate>
                                 <TextBlock Text="{Binding}" Foreground="Gray"/>

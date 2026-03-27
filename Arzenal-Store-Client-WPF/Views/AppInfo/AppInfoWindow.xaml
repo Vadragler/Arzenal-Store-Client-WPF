@@ -1,0 +1,64 @@
+﻿<Window x:Class="Arzenal.StoreManager.WPF.Views.AppInfo.AppInfoWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Arzenal.StoreManager.WPF.Views.AppInfo.Controls"
+        
+        mc:Ignorable="d"
+        Title="AppInfoWindow" Height="870" Width="600" MinWidth="400" MinHeight="570">
+
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="Auto"/>
+        </Grid.RowDefinitions>
+
+        <!-- Contenu défilant -->
+        <ScrollViewer VerticalScrollBarVisibility="Auto" Grid.Row="0">
+            <StackPanel>
+                <local:AppIconField />
+                <local:AppNameField />
+                <local:GenericCollectionField
+                 Items="{Binding TagSection.Items}"
+                 SelectedItems="{Binding TagSection.SelectedItems}"
+                 ChosenItem="{Binding TagSection.ChosenItem}"
+                 AddCommand="{Binding TagSection.AddCommand}"
+                 RemoveCommand="{Binding TagSection.RemoveCommand}"
+                 DataContext="{Binding TagSection}"/>
+                <local:AppVersionField />
+                <local:AppDescriptionField />
+                <local:AppFilePathField />
+                <local:AppVisibilityField />
+                <local:AppCategoryField />
+                <local:AppSizeField />
+                <local:GenericCollectionField
+                 Items="{Binding LanguageSection.Items}"
+                 SelectedItems="{Binding LanguageSection.SelectedItems}"
+                 ChosenItem="{Binding LanguageSection.ChosenItem}"
+                 AddCommand="{Binding LanguageSection.AddCommand}"
+                 RemoveCommand="{Binding LanguageSection.RemoveCommand}"
+                 DataContext="{Binding LanguageSection}"/>
+                <local:AppRequirementsField />
+
+                <local:GenericCollectionField
+                 Items="{Binding OsSection.Items}"
+                 SelectedItems="{Binding OsSection.SelectedItems}"
+                 ChosenItem="{Binding OsSection.ChosenItem}"
+                 AddCommand="{Binding OsSection.AddCommand}"
+                 RemoveCommand="{Binding OsSection.RemoveCommand}"
+                 DataContext="{Binding OsSection}"/>
+
+
+            </StackPanel>
+        </ScrollViewer>
+
+        <!-- Boutons Enregistrer et Annuler fixes -->
+        <Grid VerticalAlignment="Bottom" Margin="0,10,0,10" Grid.Row="1">
+            <StackPanel Orientation="Horizontal" HorizontalAlignment="Right">
+                <Button Content="Annuler" Margin="0,0,10,0" Width="100" Height="30" Command="{Binding CancelButtonCommand}" Style="{StaticResource ButtonStyle}"/>
+                <Button Content="Enregistrer" Margin="0,0,10,0" Width="100" Height="30" Command="{Binding SaveButtonCommand}" Style="{StaticResource ButtonStyle}"/>
+            </StackPanel>
+        </Grid>
+    </Grid>
+</Window>
